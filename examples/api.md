@@ -1,6 +1,7 @@
 # REST API Examples
 
 All endpoints are available at [https://metadata.cbd.int/api/kmgbf/](https://metadata.cbd.int/api/kmgbf/).
+
 Interactive documentation (Swagger UI) is at [https://metadata.cbd.int/api/kmgbf/docs](https://metadata.cbd.int/api/kmgbf/docs).
 
 ## Common parameters
