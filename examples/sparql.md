@@ -150,5 +150,4 @@ ORDER BY ?type ?code
 - Change `FILTER (lang(?label) = "en")` to `"fr"` or `"es"` for French or Spanish results.
 - The live SPARQL endpoint also supports GET requests for simple queries:
   `https://metadata.cbd.int/sparql?query=...`
-- For interactive querying, use the [Fuseki web UI](https://metadata.cbd.int/sparql) or
-  the [vocabulary browser](https://metadata.cbd.int).
+- For interactive querying, use the [vocabulary browser](https://metadata.cbd.int).
