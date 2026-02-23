@@ -1,0 +1,166 @@
+@prefix : <http://metadata.cbd.int/kmgbf/ontology#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://metadata.cbd.int/kmgbf/ontology> a owl:Ontology ;
+    rdfs:label "Kunming-Montreal Global Biodiversity Framework Ontology"@en ,
+               "Ontologie du Cadre mondial de la biodiversité de Kunming-Montréal"@fr ,
+               "Ontología del Marco Mundial de Biodiversidad de Kunming-Montreal"@es ;
+    dct:created "2026-01-29"^^xsd:date ;
+    dct:creator "Convention on Biological Diversity Secretariat" ;
+    rdfs:comment "Official ontology for the monitoring framework of the Kunming-Montreal Global Biodiversity Framework adopted at COP-15 in December 2022. Based on Decision 16/31 (February 2025) on indicators for the monitoring framework. Goals and Targets are parallel concepts at the same hierarchical level, both monitored by indicators."@en ;
+    owl:versionInfo "1.0" ;
+    rdfs:seeAlso <https://www.cbd.int/gbf> ,
+                 <https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf> .
+
+## Classes ##
+
+:Goal a owl:Class ;
+    rdfs:label "Goal"@en ,
+               "Objectif"@fr ,
+               "Objetivo"@es ;
+    rdfs:comment "One of the four 2050 outcome-oriented Goals (A, B, C, D) of the Kunming-Montreal Global Biodiversity Framework. Goals describe desired states of nature and biodiversity by 2050. Goals and Targets are parallel concepts at the same hierarchical level - they are not in a hierarchical relationship."@en ;
+    rdfs:subClassOf skos:Concept ;
+    skos:example "Goal A: The integrity, connectivity and resilience of all ecosystems are maintained, enhanced, or restored..."@en .
+
+:Target a owl:Class ;
+    rdfs:label "Target"@en ,
+               "Cible"@fr ,
+               "Meta"@es ;
+    rdfs:comment "One of the 23 action-oriented targets for 2030 under the Kunming-Montreal Global Biodiversity Framework. Targets describe specific actions and milestones to be achieved by 2030. Goals and Targets are parallel concepts at the same hierarchical level - they are not in a hierarchical relationship."@en ;
+    rdfs:subClassOf skos:Concept ;
+    skos:example "Target 3: Ensure and enable that by 2030 at least 30 per cent of terrestrial, inland water, and of coastal and marine areas... are effectively conserved and managed..."@en .
+
+:GoalOrTarget a owl:Class ;
+    rdfs:label "Goal or Target"@en ;
+    rdfs:comment "Convenience class representing the union of Goal and Target."@en ;
+    owl:equivalentClass [ a owl:Class ; owl:unionOf ( :Goal :Target ) ] .
+
+:Indicator a owl:Class ;
+    rdfs:label "Indicator"@en ,
+               "Indicateur"@fr ,
+               "Indicador"@es ;
+    rdfs:comment "A metric used to monitor progress toward goals and/or targets. An indicator's role (headline, binary, component, complementary) is determined by its relationship to goals/targets, not by its intrinsic type. A single indicator can play different roles for different goals or targets (e.g., indicator 7.1 is a headline indicator for Target 7 and a complementary indicator for Target 8)."@en ;
+    rdfs:subClassOf skos:Concept ;
+    skos:example "Indicator 7.1 is headline for Target 7 and complementary for Target 8"@en .
+
+## Object Properties ##
+
+## Headline Indicator Relationships ##
+
+:isHeadlineFor a owl:ObjectProperty ;
+    rdfs:label "is headline indicator for"@en ,
+               "est l'indicateur principal pour"@fr ,
+               "es indicador principal para"@es ;
+    rdfs:comment "Links an indicator to the goal(s) or target(s) for which it serves as a headline indicator. Headline indicators are primary quantitative indicators that all Parties are requested to use in their national reports (Annex I of Decision 16/31)."@en ;
+    rdfs:domain :Indicator ;
+    rdfs:range :GoalOrTarget ;
+    owl:inverseOf :hasHeadlineIndicator ;
+    skos:example "Indicator A.1 is headline for Goal A; Indicator A.1 is headline for Target 1"@en .
+
+:hasHeadlineIndicator a owl:ObjectProperty ;
+    rdfs:label "has headline indicator"@en ;
+    rdfs:comment "Inverse of isHeadlineFor: links a goal or target to its headline indicator(s)."@en ;
+    rdfs:domain :GoalOrTarget ;
+    rdfs:range :Indicator .
+
+## Binary Indicator Relationships ##
+
+:isBinaryFor a owl:ObjectProperty ;
+    rdfs:label "is binary indicator for"@en ,
+               "est l'indicateur binaire pour"@fr ,
+               "es indicador binario para"@es ;
+    rdfs:comment "Links an indicator to the goal(s) or target(s) for which it serves as a binary indicator. Binary indicators are policy and action indicators with structured yes/no questions that all Parties are requested to respond to (Annex I of Decision 16/31)."@en ;
+    rdfs:domain :Indicator ;
+    rdfs:range :GoalOrTarget ;
+    owl:inverseOf :hasBinaryIndicator ;
+    skos:example "Indicator 1.b is binary for Target 1"@en .
+
+:hasBinaryIndicator a owl:ObjectProperty ;
+    rdfs:label "has binary indicator"@en ;
+    rdfs:comment "Inverse of isBinaryFor: links a goal or target to its binary indicator(s)."@en ;
+    rdfs:domain :GoalOrTarget ;
+    rdfs:range :Indicator .
+
+## Component Indicator Relationships ##
+
+:isComponentFor a owl:ObjectProperty ;
+    rdfs:label "is component indicator for"@en ,
+               "est l'indicateur de composante pour"@fr ,
+               "es indicador de componente para"@es ;
+    rdfs:comment "Links an indicator to the goal(s) or target(s) for which it serves as a component indicator. Component indicators are optional and provide specific detail on components of headline indicators (Annex II of Decision 16/31). Use is subject to national circumstances and priorities."@en ;
+    rdfs:domain :Indicator ;
+    rdfs:range :GoalOrTarget ;
+    owl:inverseOf :hasComponentIndicator ;
+    skos:example "Indicator A.CT.1 (Ecosystem Intactness Index) is component for Goal A"@en .
+
+:hasComponentIndicator a owl:ObjectProperty ;
+    rdfs:label "has component indicator"@en ;
+    rdfs:comment "Inverse of isComponentFor: links a goal or target to its component indicator(s)."@en ;
+    rdfs:domain :GoalOrTarget ;
+    rdfs:range :Indicator .
+
+## Complementary Indicator Relationships ##
+
+:isComplementaryFor a owl:ObjectProperty ;
+    rdfs:label "is complementary indicator for"@en ,
+               "est l'indicateur complémentaire pour"@fr ,
+               "es indicador complementario para"@es ;
+    rdfs:comment "Links an indicator to the goal(s) or target(s) for which it serves as a complementary indicator. Complementary indicators are optional and provide additional context (Annex II of Decision 16/31). Use is subject to national circumstances and priorities."@en ;
+    rdfs:domain :Indicator ;
+    rdfs:range :GoalOrTarget ;
+    owl:inverseOf :hasComplementaryIndicator ;
+    skos:example "Indicator A.CY.1 is complementary for Goal A; Indicator 7.1 is complementary for Target 8"@en .
+
+:hasComplementaryIndicator a owl:ObjectProperty ;
+    rdfs:label "has complementary indicator"@en ;
+    rdfs:comment "Inverse of isComplementaryFor: links a goal or target to its complementary indicator(s)."@en ;
+    rdfs:domain :GoalOrTarget ;
+    rdfs:range :Indicator .
+
+## Datatype Properties ##
+
+:indicatorCode a owl:DatatypeProperty ;
+    rdfs:label "indicator code"@en ,
+               "code de l'indicateur"@fr ,
+               "código del indicador"@es ;
+    rdfs:comment "The unique identifier for the indicator following official patterns: {Goal/Target}.{number} for headline (e.g., A.1, 1.1), {Goal/Target}.b for binary (e.g., B.b, 1.b), {Goal/Target}.CT.{number} for component (e.g., A.CT.1, 2.CT.1), {Goal/Target}.CY.{number} for complementary (e.g., A.CY.1, 1.CY.1)."@en ;
+    rdfs:domain :Indicator ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf skos:notation ;
+    skos:example "A.1, 1.1, B.b, 1.b, A.CT.1, 2.CT.1, A.CY.1, 1.CY.1"@en .
+
+:goalCode a owl:DatatypeProperty ;
+    rdfs:label "goal code"@en ,
+               "code de l'objectif"@fr ,
+               "código del objetivo"@es ;
+    rdfs:comment "The letter identifier for the goal. Must be one of: A, B, C, or D."@en ;
+    rdfs:domain :Goal ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf skos:notation ;
+    skos:example "A, B, C, D"@en .
+
+:targetCode a owl:DatatypeProperty ;
+    rdfs:label "target code"@en ,
+               "code de la cible"@fr ,
+               "código de la meta"@es ;
+    rdfs:comment "The numeric identifier for the target. Must be an integer from 1 to 23."@en ;
+    rdfs:domain :Target ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf skos:notation ;
+    skos:example "1, 2, 3, ..., 23"@en .
+
+## Mappings to imported vocabularies ##
+
+skos:prefLabel rdfs:subPropertyOf schema:name .
+skos:notation rdfs:subPropertyOf schema:identifier .
+dct:subject a owl:ObjectProperty ;
+    rdfs:domain skos:Concept ;
+    rdfs:range skos:Concept .
+
+

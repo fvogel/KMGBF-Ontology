@@ -1,0 +1,197 @@
+@prefix : <http://metadata.cbd.int/kmgbf/ontology#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+## KMGBF SHACL Validation Shapes ##
+## This file validates data instances against the KMGBF ontology ##
+## Updated to match the parallel Goals/Targets structure ##
+
+## GOAL SHAPES ##
+
+:GoalShape a sh:NodeShape ;
+    sh:targetClass :Goal ;
+    sh:property [
+        sh:path :goalCode ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "A" "B" "C" "D" ) ;
+        sh:message "Goal must have exactly one goalCode from: A, B, C, D" ;
+    ] ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:message "Goal must have at least one prefLabel" ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:uniqueLang true ;
+        sh:message "Goal must have at least one definition (one per language)" ;
+    ] .
+
+## TARGET SHAPES ##
+
+:TargetShape a sh:NodeShape ;
+    sh:targetClass :Target ;
+    sh:property [
+        sh:path :targetCode ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:maxInclusive 23 ;
+        sh:message "Target must have exactly one targetCode between 1 and 23" ;
+    ] ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:message "Target must have at least one prefLabel" ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:minCount 1 ;
+        sh:uniqueLang true ;
+        sh:message "Target must have at least one definition (one per language)" ;
+    ] .
+
+## INDICATOR SHAPE ##
+## Note: All indicators are class :Indicator ##
+## Their role (headline, binary, component, complementary) is determined by properties, not subclasses ##
+
+:IndicatorShape a sh:NodeShape ;
+    sh:targetClass :Indicator ;
+    sh:property [
+        sh:path :indicatorCode ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[A-D]\\.(\\d+|b|CT\\.\\d+|CY\\.\\d+)$|^\\d+\\.(\\d+|b|CT\\.\\d+|CY\\.\\d+)$" ;
+        sh:message "Indicator must have a valid indicatorCode (e.g., A.1, 1.1, A.CT.1, 1.b)" ;
+    ] ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        sh:minCount 1 ;
+        sh:message "Indicator must have at least one prefLabel" ;
+    ] .
+
+## INDICATOR ROLE VALIDATION ##
+## Validate that each indicator has at least one role ##
+
+:IndicatorRoleShape a sh:NodeShape ;
+    sh:targetClass :Indicator ;
+    sh:sparql [
+        sh:message "Indicator must have at least one role (isHeadlineFor, isBinaryFor, isComponentFor, or isComplementaryFor)" ;
+        sh:select """
+            PREFIX : <http://metadata.cbd.int/kmgbf/ontology#>
+            SELECT $this
+            WHERE {
+                $this a :Indicator .
+                FILTER NOT EXISTS {
+                    { $this :isHeadlineFor ?x } UNION
+                    { $this :isBinaryFor ?x } UNION
+                    { $this :isComponentFor ?x } UNION
+                    { $this :isComplementaryFor ?x }
+                }
+            }
+        """ ;
+    ] .
+
+## ROLE PROPERTY VALIDATION ##
+## Validate that role properties point to correct classes ##
+
+:HeadlineForTargetValidation a sh:NodeShape ;
+    sh:targetClass :Indicator ;
+    sh:property [
+        sh:path :isHeadlineFor ;
+        sh:or (
+            [ sh:class :Goal ]
+            [ sh:class :Target ]
+        ) ;
+        sh:message "isHeadlineFor must point to a Goal or Target" ;
+    ] .
+
+:BinaryForTargetValidation a sh:NodeShape ;
+    sh:targetClass :Indicator ;
+    sh:property [
+        sh:path :isBinaryFor ;
+        sh:or (
+            [ sh:class :Goal ]
+            [ sh:class :Target ]
+        ) ;
+        sh:message "isBinaryFor must point to a Goal or Target" ;
+    ] .
+
+:ComponentForValidation a sh:NodeShape ;
+    sh:targetClass :Indicator ;
+    sh:property [
+        sh:path :isComponentFor ;
+        sh:or (
+            [ sh:class :Goal ]
+            [ sh:class :Target ]
+        ) ;
+        sh:message "isComponentFor must point to a Goal or Target" ;
+    ] .
+
+:ComplementaryForTargetValidation a sh:NodeShape ;
+    sh:targetClass :Indicator ;
+    sh:property [
+        sh:path :isComplementaryFor ;
+        sh:or (
+            [ sh:class :Goal ]
+            [ sh:class :Target ]
+        ) ;
+        sh:message "isComplementaryFor must point to a Goal or Target" ;
+    ] .
+
+## UNIQUENESS CONSTRAINTS ##
+
+:UniqueGoalCode a sh:NodeShape ;
+    sh:targetClass :Goal ;
+    sh:sparql [
+        sh:message "Each goal code (A, B, C, D) must be unique" ;
+        sh:select """
+            PREFIX : <http://metadata.cbd.int/kmgbf/ontology#>
+            SELECT $this ?code (COUNT(?other) as ?count)
+            WHERE {
+                $this :goalCode ?code .
+                ?other :goalCode ?code .
+            }
+            GROUP BY $this ?code
+            HAVING (COUNT(?other) > 1)
+        """ ;
+    ] .
+
+:UniqueTargetCode a sh:NodeShape ;
+    sh:targetClass :Target ;
+    sh:sparql [
+        sh:message "Each target code (1-23) must be unique" ;
+        sh:select """
+            PREFIX : <http://metadata.cbd.int/kmgbf/ontology#>
+            SELECT $this ?code (COUNT(?other) as ?count)
+            WHERE {
+                $this :targetCode ?code .
+                ?other :targetCode ?code .
+            }
+            GROUP BY $this ?code
+            HAVING (COUNT(?other) > 1)
+        """ ;
+    ] .
+
+:UniqueIndicatorCode a sh:NodeShape ;
+    sh:targetClass :Indicator ;
+    sh:sparql [
+        sh:message "Each indicator code must be unique" ;
+        sh:select """
+            PREFIX : <http://metadata.cbd.int/kmgbf/ontology#>
+            SELECT $this ?code (COUNT(?other) as ?count)
+            WHERE {
+                $this :indicatorCode ?code .
+                ?other :indicatorCode ?code .
+            }
+            GROUP BY $this ?code
+            HAVING (COUNT(?other) > 1)
+        """ ;
+    ] .
+
