@@ -1,6 +1,8 @@
 # SPARQL Query Examples
 
-All queries run against the live endpoint at `https://metadata.cbd.int/sparql`.
+All queries run against the live endpoint at `https://metadata.cbd.int/sparql/kmgbf`.
+
+This endpoint is scoped to the KMGBF dataset. Future datasets (e.g. CBD Thesaurus) will be available at their own dedicated endpoints.
 
 ## Prefixes (used in all queries)
 
@@ -26,7 +28,7 @@ ORDER BY ?code
 ```
 
 ```bash
-curl -X POST https://metadata.cbd.int/sparql \
+curl -X POST https://metadata.cbd.int/sparql/kmgbf \
   -H "Accept: application/sparql-results+json" \
   --data-urlencode "query=PREFIX : <http://metadata.cbd.int/kmgbf/ontology#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -149,5 +151,5 @@ ORDER BY ?type ?code
 
 - Change `FILTER (lang(?label) = "en")` to `"fr"` or `"es"` for French or Spanish results.
 - The live SPARQL endpoint also supports GET requests for simple queries:
-  `https://metadata.cbd.int/sparql?query=...`
+  `https://metadata.cbd.int/sparql/kmgbf?query=...`
 - For interactive querying, use the [vocabulary browser](https://metadata.cbd.int).

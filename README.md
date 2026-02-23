@@ -12,7 +12,7 @@ adopted at COP-15 (Montreal, December 2022) and finalized at COP-16 (Cali, Octob
 | Service | URL |
 |---------|-----|
 | Vocabulary browser | https://metadata.cbd.int |
-| SPARQL endpoint | https://metadata.cbd.int/sparql |
+| SPARQL endpoint | https://metadata.cbd.int/sparql/kmgbf |
 | REST API | https://metadata.cbd.int/api |
 | API documentation (Swagger) | https://metadata.cbd.int/api/kmgbf/docs |
 | Download (Turtle, JSON-LD) | https://metadata.cbd.int/download/ |
