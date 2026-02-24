@@ -10,6 +10,7 @@ Interactive documentation (Swagger UI) is at [https://metadata.cbd.int/api/kmgbf
 |-----------|--------|---------|-------------|
 | `lang` | `en`, `fr`, `es`, `all` | `en` | Language for labels |
 | `format` | `json`, `csv` | `json` | Response format (list endpoints only) |
+| `include` | `definition` | — | Add `definition` field to list results |
 
 ---
 
@@ -77,8 +78,25 @@ Returns all indicators for Target 3 (the 30×30 target), with their role.
 curl https://metadata.cbd.int/api/kmgbf/indicators/A.1
 ```
 
-Returns the full record for indicator A.1, including all roles it plays across
-different goals and targets.
+Returns the full record, including definition, custodian agencies (headline indicators only), and all monitoring relationships.
+
+```json
+{
+  "code": "A.1",
+  "uri": "http://metadata.cbd.int/kmgbf/indicator_A.1",
+  "label": {"en": "Red List of Ecosystems"},
+  "definition": {"en": "The Red List of Ecosystems index measures changes in the risk of ecosystem collapse..."},
+  "custodianAgency": ["IUCN", "University of Queensland"],
+  "monitors": [
+    {"uri": "http://metadata.cbd.int/kmgbf/goal_A", "type": "Goal", "role": "headline",
+     "label": {"en": "Goal A"}},
+    {"uri": "http://metadata.cbd.int/kmgbf/target_2", "type": "Target", "role": "headline",
+     "label": {"en": "Target 2"}}
+  ]
+}
+```
+
+`custodianAgency` is `null` for non-headline indicators (no guidance data in INF/3).
 
 ---
 
@@ -99,6 +117,7 @@ curl "https://metadata.cbd.int/api/kmgbf/search?q=marine"
 ```
 
 Returns matching goals, targets, and indicators whose labels contain the search term.
+Add `&include=definition` to also search within definitions and include them in the results.
 
 ---
 
@@ -122,6 +141,29 @@ Add `?format=csv` to list endpoints:
 ```bash
 curl "https://metadata.cbd.int/api/kmgbf/indicators?format=csv" -o indicators.csv
 curl "https://metadata.cbd.int/api/kmgbf/targets?format=csv" -o targets.csv
+```
+
+---
+
+## 11. List all custodian agencies
+
+Returns all custodian organisations for headline indicators (source: CBD/COP/16/INF/3/Rev.1),
+each with the list of indicator codes they are responsible for.
+
+```bash
+curl https://metadata.cbd.int/api/kmgbf/custodian-agencies
+```
+
+```json
+{
+  "count": 15,
+  "custodianAgencies": [
+    {"agency": "BirdLife International", "indicators": ["A.3", "3.1"]},
+    {"agency": "FAO", "indicators": ["2.1", "10.1"]},
+    {"agency": "IUCN", "indicators": ["A.1", "A.3", "3.1", "15.1"]},
+    ...
+  ]
+}
 ```
 
 ---

@@ -147,6 +147,68 @@ ORDER BY ?type ?code
 
 ---
 
+## 7. Get definitions for headline indicators
+
+`skos:definition` is populated for headline indicators from CBD/COP/16/INF/3/Rev.1 (field 5a).
+
+```sparql
+SELECT ?code ?label ?definition
+WHERE {
+  ?indicator :isHeadlineFor ?x ;
+             :indicatorCode ?code ;
+             skos:prefLabel ?label .
+  OPTIONAL { ?indicator skos:definition ?definition .
+             FILTER (lang(?definition) = "en") }
+  FILTER (lang(?label) = "en")
+}
+ORDER BY ?code
+```
+
+---
+
+## 8. Find indicators by custodian agency
+
+Custodian agency data is available for headline indicators (source: CBD/COP/16/INF/3/Rev.1, field 10a).
+Replace `"IUCN"` with any organisation name (partial matches require `CONTAINS`).
+
+```sparql
+# Exact match
+SELECT ?code ?label ?agency
+WHERE {
+  ?indicator :indicatorCode ?code ;
+             skos:prefLabel ?label ;
+             :custodianAgency ?agency .
+  FILTER (?agency = "IUCN")
+  FILTER (lang(?label) = "en")
+}
+ORDER BY ?code
+```
+
+```sparql
+# Partial match (case-insensitive)
+SELECT ?code ?label ?agency
+WHERE {
+  ?indicator :indicatorCode ?code ;
+             skos:prefLabel ?label ;
+             :custodianAgency ?agency .
+  FILTER (CONTAINS(LCASE(?agency), "unep"))
+  FILTER (lang(?label) = "en")
+}
+ORDER BY ?code
+```
+
+```sparql
+# All custodian agencies with their indicator counts
+SELECT ?agency (COUNT(DISTINCT ?indicator) AS ?count)
+WHERE {
+  ?indicator :custodianAgency ?agency .
+}
+GROUP BY ?agency
+ORDER BY DESC(?count) ?agency
+```
+
+---
+
 ## Tips
 
 - Change `FILTER (lang(?label) = "en")` to `"fr"` or `"es"` for French or Spanish results.
