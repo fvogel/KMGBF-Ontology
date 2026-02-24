@@ -155,6 +155,13 @@
     rdfs:subPropertyOf skos:notation ;
     skos:example "1, 2, 3, ..., 23"@en .
 
+:custodianAgency a owl:DatatypeProperty ;
+    rdfs:label "custodian agency"@en ;
+    rdfs:comment "The international organization responsible for compiling and reporting data for this indicator, as designated in the KMGBF monitoring framework guidance (CBD/COP/16/INF/3/Rev.1, field 10a). Parallel to sdg:custodianAgency in the UN SDG ontology."@en ;
+    rdfs:domain :Indicator ;
+    rdfs:range xsd:string ;
+    skos:example "International Union for Conservation of Nature (IUCN)"@en .
+
 ## Mappings to imported vocabularies ##
 
 skos:prefLabel rdfs:subPropertyOf schema:name .

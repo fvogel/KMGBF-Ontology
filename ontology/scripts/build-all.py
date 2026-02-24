@@ -10,6 +10,7 @@ FILES = [
     BASE_DIR / "data/goals.ttl",
     BASE_DIR / "data/targets.ttl",
     BASE_DIR / "data/indicators.ttl",
+    BASE_DIR / "data/indicators-guidance.ttl",
 ]
 OUT = BASE_DIR / "kmgbf-all.ttl"
 SHAPES = BASE_DIR / "validation/kmgbf-shapes.ttl"
