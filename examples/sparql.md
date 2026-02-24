@@ -207,6 +207,24 @@ GROUP BY ?agency
 ORDER BY DESC(?count) ?agency
 ```
 
+```sparql
+# Definition and all custodians in one row per indicator (no repetition)
+# Uses GROUP_CONCAT to collapse multiple custodian values into a pipe-separated string
+SELECT ?code ?label (SAMPLE(?def) AS ?definition)
+       (GROUP_CONCAT(DISTINCT ?custodian ; separator=" | ") AS ?custodians)
+WHERE {
+  ?indicator :isHeadlineFor ?x ;
+             :indicatorCode ?code ;
+             skos:prefLabel ?label .
+  OPTIONAL { ?indicator skos:definition ?def .
+             FILTER (lang(?def) = "en") }
+  OPTIONAL { ?indicator :custodianAgency ?custodian }
+  FILTER (lang(?label) = "en")
+}
+GROUP BY ?code ?label
+ORDER BY ?code
+```
+
 ---
 
 ## Tips
