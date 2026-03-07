@@ -9,7 +9,7 @@ Interactive documentation (Swagger UI) is at [https://metadata.cbd.int/api/kmgbf
 | Parameter | Values | Default | Description |
 |-----------|--------|---------|-------------|
 | `lang` | `en`, `fr`, `es`, `all` | `en` | Language for labels |
-| `format` | `json`, `csv` | `json` | Response format (list endpoints only) |
+| `format` | `json`, `csv`, `xlsx` | `json` | Response format (list endpoints only). Use `xlsx` for Excel — avoids encoding issues on Mac. |
 | `include` | `definition` | — | Add `definition` field to list results |
 
 ---
@@ -134,18 +134,37 @@ Use `?lang=all` to get labels in English, French, and Spanish in a single respon
 
 ---
 
-## 10. CSV export
+## 10. CSV / Excel export
 
-Add `?format=csv` to list endpoints:
+Add `?format=csv` or `?format=xlsx` to list endpoints. Excel (`.xlsx`) is recommended
+for multilingual data — avoids encoding issues with accented characters on Mac.
 
 ```bash
 curl "https://metadata.cbd.int/api/kmgbf/indicators?format=csv" -o indicators.csv
-curl "https://metadata.cbd.int/api/kmgbf/targets?format=csv" -o targets.csv
+curl "https://metadata.cbd.int/api/kmgbf/indicators?format=xlsx&lang=all" -o indicators.xlsx
+curl "https://metadata.cbd.int/api/kmgbf/targets?format=xlsx" -o targets.xlsx
 ```
 
 ---
 
-## 11. List all custodian agencies
+## 11. Indicator roles — flat edge list
+
+Returns one row per indicator × role × goal/target — useful for building pivot tables
+or linking indicators to goals/targets in a spreadsheet.
+
+```bash
+curl "https://metadata.cbd.int/api/kmgbf/indicators/roles" | python3 -m json.tool
+
+# All languages in separate columns (recommended for spreadsheet use)
+curl "https://metadata.cbd.int/api/kmgbf/indicators/roles?format=xlsx&lang=all" \
+  -o kmgbf-indicator-roles.xlsx
+```
+
+Role codes: `HI` = headline, `BI` = binary, `CT` = component, `CY` = complementary.
+
+---
+
+## 12. List all custodian agencies
 
 Returns all custodian organisations for headline indicators (source: CBD/COP/16/INF/3/Rev.1),
 each with the list of indicator codes they are responsible for.
