@@ -14,6 +14,7 @@
     dct:created "2026-01-29"^^xsd:date ;
     dct:creator "Convention on Biological Diversity Secretariat" ;
     rdfs:comment "Official ontology for the monitoring framework of the Kunming-Montreal Global Biodiversity Framework adopted at COP-15 in December 2022. Based on Decision 16/31 (February 2025) on indicators for the monitoring framework. Goals and Targets are parallel concepts at the same hierarchical level, both monitored by indicators."@en ;
+    skos:note "Note on SKOS compatibility: The triplestore serving this ontology contains additional skos:broader/skos:narrower triples linking indicators to goals and targets. These are NOT part of this OWL model — they are materialized by the data loading pipeline solely to enable browsing in SKOSMOS, which requires a SKOS hierarchy. The canonical relationships defined here are :isHeadlineFor, :isBinaryFor, :isComponentFor, and :isComplementaryFor. These role-typed properties correctly express that a single indicator can have different roles for different goals or targets — a fact that a flat skos:broader hierarchy cannot represent."@en ;
     owl:versionInfo "1.0" ;
     rdfs:seeAlso <https://www.cbd.int/gbf> ,
                  <https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf> .
@@ -201,7 +202,7 @@ kmgbf:goal_A a :Goal ;
     skos:definition """The integrity, connectivity and resilience of all ecosystems are maintained, enhanced, or restored, substantially increasing the area of natural ecosystems by 2050; Human induced extinction of known threatened species is halted, and, by 2050, the extinction rate and risk of all species are reduced tenfold and the abundance of native wild species is increased to healthy and resilient levels; The genetic diversity within populations of wild and domesticated species is maintained, safeguarding their adaptive potential."""@en ,
                     """Se mantiene, se aumenta o se restablece la integridad, la conectividad y la resiliencia de todos los ecosistemas, aumentando sustancialmente la superficie de los ecosistemas naturales para 2050; Se detiene la extinción de especies amenazadas conocidas causada por la actividad humana y, para 2050, el ritmo y el riesgo de extinción de todas las especies se reduce a la décima parte, y la abundancia de las especies silvestres autóctonas se incrementa a niveles saludables y resilientes; Se mantiene la diversidad genética de las especies silvestres y domesticadas, salvaguardando su potencial de adaptación."""@es ,
                     """Préserver, améliorer ou rétablir l'intégrité, la connectivité et la résilience de tous les écosystèmes, afin d'accroître considérablement la superficie des écosystèmes naturels d'ici à 2050 ; Mettre fin à l'extinction d'origine anthropique des espèces menacées connues et, d'ici à 2050, diviser par dix le taux et le risque d'extinction de toutes les espèces et accroître l'abondance des espèces sauvages indigènes pour atteindre des niveaux sains et résilients ; Préserver la diversité génétique au sein des populations d'espèces sauvages et domestiquées, afin de sauvegarder leur potentiel d'adaptation."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## GOAL B: Sustainable Use ##
 
@@ -216,7 +217,7 @@ kmgbf:goal_B a :Goal ;
     skos:definition """Biodiversity is sustainably used and managed and nature's contributions to people, including ecosystem functions and services, are valued, maintained and enhanced, with those currently in decline being restored, supporting the achievement of sustainable development for the benefit of present and future generations by 2050."""@en ,
                     """La biodiversidad se utiliza y gestiona de manera sostenible y las contribuciones de la naturaleza a las personas, entre ellas las funciones y servicios de los ecosistemas, se valoran, se mantienen y se mejoran, restableciéndose aquellas que actualmente están deteriorándose, apoyando el logro del desarrollo sostenible en beneficio de las generaciones actuales y futuras para 2050."""@es ,
                     """Utiliser et gérer durablement la biodiversité et valoriser, préserver et renforcer les contributions de la nature à l'homme, y compris les fonctions et services écosystémiques, et rétablir ceux qui sont actuellement en déclin, afin de favoriser un développement durable dans l'intérêt des générations actuelles et futures d'ici à 2050."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## GOAL C: Benefit Sharing ##
 
@@ -231,7 +232,7 @@ kmgbf:goal_C a :Goal ;
     skos:definition """The monetary and non-monetary benefits from the utilization of genetic resources, and digital sequence information on genetic resources, and of traditional knowledge associated with genetic resources, as applicable, are shared fairly and equitably, including, as appropriate with indigenous peoples and local communities, and substantially increased by 2050, while ensuring traditional knowledge associated with genetic resources is appropriately protected, thereby contributing to the conservation and sustainable use of biodiversity, in accordance with internationally agreed access and benefit-sharing instruments."""@en ,
                     """Los beneficios monetarios y no monetarios de la utilización de los recursos genéticos y de la información digital sobre secuencias de recursos genéticos, y de los conocimientos tradicionales asociados a los recursos genéticos, según proceda, se comparten de manera justa y equitativa, y en particular, cuando corresponda, con los pueblos indígenas y las comunidades locales, y se incrementan sustancialmente para 2050, al tiempo que se garantiza que se protegen adecuadamente los conocimientos tradicionales asociados a los recursos genéticos, contribuyendo así a la conservación y utilización sostenible de la diversidad biológica, de conformidad con instrumentos de acceso y participación en los beneficios acordados internacionalmente."""@es ,
                     """Partager de manière juste et équitable les avantages monétaires et non monétaires découlant de l'utilisation des ressources génétiques et de l'information de séquençage numérique sur les ressources génétiques, ainsi que des connaissances traditionnelles associées aux ressources génétiques, le cas échéant, y compris, s'il y a lieu, avec les peuples autochtones et les communautés locales, et les augmenter significativement d'ici à 2050, tout en veillant à ce que les connaissances traditionnelles associées aux ressources génétiques soient protégées de manière appropriée, contribuant ainsi à la conservation et à l'utilisation durable de la biodiversité, conformément aux instruments relatifs à l'accès et au partage des avantages convenus au niveau international."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## GOAL D: Means of Implementation ##
 
@@ -246,7 +247,7 @@ kmgbf:goal_D a :Goal ;
     skos:definition """Adequate means of implementation, including financial resources, capacity-building, technical and scientific cooperation, and access to and transfer of technology to fully implement the Kunming-Montreal global biodiversity framework are secured and equitably accessible to all Parties, especially developing countries, in particular the least developed countries and small island developing States, as well as countries with economies in transition, progressively closing the biodiversity finance gap of 700 billion dollars per year, and aligning financial flows with the Kunming-Montreal Global Biodiversity Framework and the 2050 Vision for Biodiversity."""@en ,
                     """Se obtienen medios de implementación adecuados, incluidos recursos financieros, creación de capacidad, cooperación científica y técnica y acceso a la tecnología y su transferencia, para implementar plenamente el Marco Mundial de Biodiversidad de Kunming Montreal y estos resultan igualmente accesibles para todas las Partes, especialmente las Partes que son países en desarrollo, en particular los países menos adelantados y los pequeños Estados insulares en desarrollo, así como los países con economías en transición, reduciendo progresivamente el déficit de financiación de la biodiversidad de 700.000 millones de dólares de los Estados Unidos al año, y armonizando las corrientes financieras con el Marco Mundial de Biodiversidad de Kunming Montreal y la Visión de la Diversidad Biológica para 2050."""@es ,
                     """Donner à toutes les Parties, en particulier aux pays en développement Parties, notamment aux pays les moins avancés et aux petits États insulaires en développement ainsi qu'aux pays à économie en transition, des moyens de mise en œuvre adéquats, y compris en matière de financement, de renforcement des capacités, de coopération technique et scientifique, d'accès aux technologies et de transfert de celles-ci, afin de mettre pleinement en œuvre le cadre mondial de la biodiversité de Kunming-Montréal, en comblant progressivement le déficit de financement de la biodiversité, qui s'élève à 700 milliards de dollars par an, et en alignant les flux financiers sur le cadre mondial et sur la Vision 2050 pour la biodiversité."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 @prefix : <http://metadata.cbd.int/kmgbf/ontology#> .
 @prefix kmgbf: <http://metadata.cbd.int/kmgbf/> .
@@ -281,7 +282,7 @@ kmgbf:target_1 a :Target ;
     skos:definition """Ensure that all areas are under participatory, integrated, and biodiversity inclusive spatial planning and/or effective management processes addressing land and sea use change, to bring the loss of areas of high biodiversity importance, including ecosystems of high ecological integrity, close to zero by 2030, while respecting the rights of indigenous peoples and local communities."""@en ,
                     """Garantizar que todas las zonas estén sujetas a planificación espacial participativa integrada que tenga en cuenta la biodiversidad y/o procesos de gestión eficaces que aborden el cambio en el uso de la tierra y los océanos, a fin de que la pérdida de zonas de suma importancia para la biodiversidad, incluidos los ecosistemas de gran integridad ecológica, se acerque a cero para 2030, respetando al mismo tiempo los derechos de los pueblos indígenas y las comunidades locales."""@es ,
                     """Veiller à ce que toutes les zones fassent l'objet d'une planification spatiale participative, intégrée et respectueuse de la biodiversité et/ou soient gérées efficacement dans le cadre de processus de changement d'affectation des terres et des mers, afin de réduire la perte de zones de grande importance pour la biodiversité, y compris d'écosystèmes de grande intégrité écologique, à un niveau proche de zéro d'ici à 2030, dans le respect des droits des peuples autochtones et des communautés locales."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 2: Restoration ##
 
@@ -300,7 +301,7 @@ kmgbf:target_2 a :Target ;
     skos:definition """Ensure that by 2030 at least 30 per cent of areas of degraded terrestrial, inland water, and coastal and marine ecosystems are under effective restoration, in order to enhance biodiversity and ecosystem functions and services, ecological integrity and connectivity."""@en ,
                     """Garantizar que para 2030 al menos un 30 % de las zonas de ecosistemas terrestres, de aguas continentales y costeros y marinos degradados estén siendo objeto de una restauración efectiva, con el fin de mejorar la biodiversidad y las funciones y los servicios de los ecosistemas y la integridad y conectividad ecológicas."""@es ,
                     """Veiller à ce que, d'ici à 2030, au moins 30 % des zones d'écosystèmes terrestres, d'eaux intérieures et d'écosystèmes marins et côtiers dégradés fassent l'objet de mesures de remise en état efficaces, afin d'améliorer la biodiversité, les fonctions et services écosystémiques, ainsi que l'intégrité et la connectivité écologiques."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 3: 30x30 Conservation ##
 
@@ -319,7 +320,7 @@ kmgbf:target_3 a :Target ;
     skos:definition """Ensure and enable that by 2030 at least 30 per cent of terrestrial, inland water, and of coastal and marine areas, especially areas of particular importance for biodiversity and ecosystem functions and services, are effectively conserved and managed through ecologically representative, well-connected and equitably governed systems of protected areas and other effective area-based conservation measures, recognizing indigenous and traditional territories where applicable, and integrated into wider landscapes, seascapes and the ocean, while ensuring that any sustainable use, where appropriate in such areas, is fully consistent with conservation outcomes, recognizing and respecting the rights of indigenous peoples and local communities, including over their traditional territories."""@en ,
                     """Garantizar y hacer posible que, para 2030, al menos un 30 % de las zonas terrestres y de aguas continentales y de las zonas marinas y costeras, especialmente las zonas de particular importancia para la biodiversidad y las funciones y los servicios de los ecosistemas, se conserven y gestionen eficazmente mediante sistemas de áreas protegidas ecológicamente representativos, bien conectados y gobernados equitativamente y otras medidas de conservación eficaces basadas en áreas, reconociendo, cuando proceda, los territorios indígenas y tradicionales, y que estén integradas a los paisajes terrestres, marinos y oceánicos más amplios, garantizando al mismo tiempo que toda utilización sostenible, cuando proceda en dichas zonas, sea plenamente coherente con la obtención de resultados de conservación, reconociendo y respetando los derechos de los pueblos indígenas y las comunidades locales, incluidos aquellos relativos a sus territorios tradicionales."""@es ,
                     """Faire en sorte que, d'ici à 2030, au moins 30 % des zones terrestres et des eaux intérieures, ainsi que des zones marines et côtières, en particulier les zones d'une grande importance pour la biodiversité et les fonctions et services écosystémiques, soient dûment conservées et gérées grâce à la mise en place d'aires protégées écologiquement représentatives, bien reliées et équitablement gérées et à d'autres mesures efficaces de conservation par zone, et veiller à créer les moyens nécessaires à cette fin, tout en reconnaissant les territoires autochtones et traditionnels, s'il y a lieu, et en intégrant les zones concernées dans les paysages terrestres et marins plus vastes et les océans, en veillant en outre à ce que l'utilisation durable, lorsqu'elle est appropriée dans ces zones, soit pleinement compatible avec les objectifs de conservation et respecte les droits des peuples autochtones et des communautés locales, y compris concernant leurs territoires traditionnels."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 4: Species Recovery ##
 
@@ -338,7 +339,7 @@ kmgbf:target_4 a :Target ;
     skos:definition """Ensure urgent management actions to halt human induced extinction of known threatened species and for the recovery and conservation of species, in particular threatened species, to significantly reduce extinction risk, as well as to maintain and restore the genetic diversity within and between populations of native, wild and domesticated species to maintain their adaptive potential, including through in situ and ex situ conservation and sustainable management practices, and effectively manage human-wildlife interactions to minimize human-wildlife conflict for coexistence."""@en ,
                     """Garantizar que se adopten con urgencia medidas de gestión para detener la extinción de especies amenazadas conocidas y para la recuperación y conservación de las especies, en particular, las especies amenazadas, a fin de reducir significativamente el riesgo de extinción, así como de mantener y restaurar la diversidad genética entre las poblaciones de especies autóctonas, silvestres y domesticadas y dentro de ellas a fin de preservar su potencial de adaptación, entre otras cosas, mediante prácticas sostenibles de gestión y conservación in situ y ex situ, y gestionar eficazmente las interacciones entre los seres humanos y la fauna y flora silvestres, con miras a reducir al mínimo los conflictos entre los seres humanos y las especies silvestres en favor de la coexistencia."""@es ,
                     """Prendre des mesures urgentes en matière de gestion en vue de faire cesser l'extinction d'origine humaine des espèces menacées connues et d'assurer leur rétablissement et leur conservation, en particulier les espèces menacées, afin de réduire significativement leur risque d'extinction ainsi que de sauvegarder et de rétablir la diversité génétique au sein des populations d'espèces indigènes, sauvages et domestiquées et entre elles, en vue de préserver leur potentiel d'adaptation, notamment grâce à des mesures de conservation in situ et ex situ et à des méthodes de gestion durable, et gérer efficacement les interactions entre l'homme et la faune de manière à limiter les conflits liés à leur cœxistence."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 5: Sustainable Use of Wild Species ##
 
@@ -357,7 +358,7 @@ kmgbf:target_5 a :Target ;
     skos:definition """Ensure that the use, harvesting and trade of wild species is sustainable, safe and legal, preventing overexploitation, minimizing impacts on non-target species and ecosystems, and reducing the risk of pathogen spill-over, applying the ecosystem approach, while respecting and protecting customary sustainable use by indigenous peoples and local communities."""@en ,
                     """Garantizar que el uso, la recolección y el comercio de especies silvestres sea sostenible, seguro y lícito, previniendo la sobreexplotación, minimizando los impactos sobre las especies no buscadas y los ecosistemas, y reduciendo el riesgo de propagación de patógenos, aplicando el enfoque por ecosistemas, al tiempo que se respeta y protege la utilización consuetudinaria sostenible por los pueblos indígenas y las comunidades locales."""@es ,
                     """Assurer une utilisation, des prélèvements et un commerce durables, sûrs et légaux des espèces sauvages, en évitant la surexploitation, en minimisant les incidences sur les espèces et les écosystèmes non visés et en réduisant le risque de propagation des agents pathogènes, conformément à l'approche écosystémique, tout en respectant et en protégeant les pratiques traditionnelles des peuples autochtones et des communautés locales en matière d'utilisation durable."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 6: Invasive Alien Species ##
 
@@ -376,7 +377,7 @@ kmgbf:target_6 a :Target ;
     skos:definition """Eliminate, minimize, reduce and or mitigate the impacts of invasive alien species on biodiversity and ecosystem services by identifying and managing pathways of the introduction of alien species, preventing the introduction and establishment of priority invasive alien species, reducing the rates of introduction and establishment of other known or potential invasive alien species by at least 50 per cent, by 2030, eradicating or controlling invasive alien species especially in priority sites, such as islands."""@en ,
                     """Eliminar, minimizar o reducir las especies exóticas invasoras o mitigar sus impactos en la biodiversidad y los servicios de los ecosistemas mediante la detección y la gestión de las vías de introducción de las especies exóticas, previniendo la introducción y el establecimiento de especies exóticas invasoras prioritarias, reduciendo las tasas de introducción y establecimiento de otras especies exóticas invasoras conocidas o potenciales en al menos un 50 % para 2030, y erradicando o controlando las especies exóticas invasoras, en especial en lugares prioritarios, como las islas."""@es ,
                     """Éviter, limiter, réduire ou atténuer les incidences des espèces exotiques envahissantes sur la biodiversité et les services écosystémiques en identifiant et en contrôlant leurs voies d'introduction, en empêchant l'introduction et la propagation des principales espèces exotiques envahissantes, en réduisant de moitié au moins les taux d'introduction et de propagation des autres espèces exotiques envahissantes connues ou potentielles d'ici à 2030, et en éradiquant ou en contrôlant les espèces exotiques envahissantes, en particulier dans les zones prioritaires, notamment dans les îles."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 7: Pollution ##
 
@@ -395,7 +396,7 @@ kmgbf:target_7 a :Target ;
     skos:definition """Reduce pollution risks and the negative impact of pollution from all sources, by 2030, to levels that are not harmful to biodiversity and ecosystem functions and services, considering cumulative effects, including: reducing excess nutrients lost to the environment by at least half including through more efficient nutrient cycling and use; reducing the overall risk from pesticides and highly hazardous chemicals by at least half including through integrated pest management, based on science, taking into account food security and livelihoods; and also preventing, reducing, and working towards eliminating plastic pollution."""@en ,
                     """Reducir para 2030 los riesgos de contaminación y el impacto negativo de la contaminación de todas las fuentes a niveles que no sean perjudiciales para la diversidad biológica y las funciones y los servicios de los ecosistemas, considerando los efectos acumulativos, entre otras cosas: a) reduciendo al menos a la mitad el exceso de nutrientes que se liberan al medio ambiente, como por ejemplo mediante un ciclo y un uso más eficientes de los nutrientes; b) reduciendo el riesgo general de los plaguicidas y las sustancias químicas altamente peligrosas al menos a la mitad, incluido mediante la gestión integrada de plagas, basándose en la ciencia, teniendo en cuenta la seguridad alimentaria y los medios de vida; y c) previniendo, reduciendo y procurando eliminar la contaminación por plástico."""@es ,
                     """Réduire les risques liés à la pollution et les incidences négatives de la pollution provenant de toutes les sources d'ici à 2030, en les portant à des niveaux sans danger pour la biodiversité et les fonctions et services écosystémiques, en tenant compte des effets cumulatifs, notamment : a) en réduisant au moins de moitié l'excès de nutriments perdus dans l'environnement, notamment grâce à un cycle et à une utilisation plus efficaces des nutriments ; b) en réduisant au moins de moitié les risques globaux liés aux pesticides et aux produits chimiques particulièrement dangereux, notamment grâce à des mesures intégrées de contrôle des ravageurs, sur la base de données scientifiques, en tenant compte des questions de sécurité alimentaire et de moyens d'existence ; c) en prévenant la pollution plastique, en la réduisant et en s'employant à l'éliminer."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 8: Climate Change ##
 
@@ -414,7 +415,7 @@ kmgbf:target_8 a :Target ;
     skos:definition """Minimize the impact of climate change and ocean acidification on biodiversity and increase its resilience through mitigation, adaptation, and disaster risk reduction actions, including through nature-based solution and/or ecosystem-based approaches, while minimizing negative and fostering positive impacts of climate action on biodiversity."""@en ,
                     """Minimizar el impacto del cambio climático y la acidificación de los océanos en la biodiversidad, y aumentar su resiliencia mediante medidas de mitigación, adaptación y reducción del riesgo de desastres, entre otras cosas por medio de soluciones basadas en la naturaleza y/o enfoques basados en los ecosistemas, al tiempo que se minimizan los impactos negativos y se fomentan los impactos positivos de la acción por el clima en la biodiversidad."""@es ,
                     """Atténuer les effets des changements climatiques et de l'acidification des océans sur la biodiversité et renforcer la résilience de celle-ci grâce à des mesures d'atténuation et d'adaptation ainsi qu'à des mesures de réduction des risques de catastrophe naturelle, y compris au moyen de solutions fondées sur la nature et/ou d'approches écosystémiques, en réduisant au minimum toute incidence négative et en favorisant les retombées positives de l'action climatique sur la biodiversité."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 9: Sustainable Management of Wild Species ##
 
@@ -433,7 +434,7 @@ kmgbf:target_9 a :Target ;
     skos:definition """Ensure that the management and use of wild species are sustainable, thereby providing social, economic and environmental benefits for people, especially those in vulnerable situations and those most dependent on biodiversity, including through sustainable biodiversity-based activities, products and services that enhance biodiversity, and protecting and encouraging customary sustainable use by indigenous peoples and local communities."""@en ,
                     """Garantizar que la gestión y el uso de especies silvestres sean sostenibles, proporcionando así beneficios sociales, económicos y ambientales para las personas, en especial aquellas que se encuentran en situaciones de vulnerabilidad y aquellas que más dependen de la biodiversidad, entre otras cosas, mediante actividades, productos y servicios sostenibles basados en la biodiversidad que la fortalezcan, y mediante la protección y promoción de la utilización consuetudinaria sostenible por los pueblos indígenas y las comunidades locales."""@es ,
                     """Garantir une gestion et une utilisation durables des espèces sauvages, de façon à procurer des avantages sociaux, économiques et environnementaux aux populations, en particulier aux populations vulnérables et à celles qui dépendent le plus de la biodiversité, notamment grâce à des activités, des produits et des services durables liés à la biodiversité qui contribuent à son amélioration, et protéger et promouvoir les pratiques traditionnelles d'utilisation durable des peuples autochtones et des communautés locales."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 10: Sustainable Agriculture, Aquaculture, Fisheries, Forestry ##
 
@@ -452,7 +453,7 @@ kmgbf:target_10 a :Target ;
     skos:definition """Ensure that areas under agriculture, aquaculture, fisheries and forestry are managed sustainably, in particular through the sustainable use of biodiversity, including through a substantial increase of the application of biodiversity friendly practices, such as sustainable intensification, agroecological and other innovative approaches contributing to the resilience and long-term efficiency and productivity of these production systems and to food security, conserving and restoring biodiversity and maintaining nature's contributions to people, including ecosystem functions and services."""@en ,
                     """Garantizar que las superficies dedicadas a la agricultura, la acuicultura, la pesca y la silvicultura se gestionen de manera sostenible, en particular a través de la utilización sostenible de la diversidad biológica, entre otras cosas, mediante un aumento sustancial del empleo de prácticas favorables a la diversidad biológica, tales como enfoques de intensificación sostenible, enfoques agroecológicos y otros enfoques innovadores, contribuyendo a la resiliencia y a la eficiencia y productividad a largo plazo de estos sistemas de producción y a la seguridad alimentaria, conservando y restaurando la diversidad biológica y manteniendo las contribuciones de la naturaleza a las personas, entre ellas las funciones y los servicios de los ecosistemas."""@es ,
                     """Assurer une gestion durable des zones agricoles, aquacoles, halieutiques et forestières, en particulier grâce à l'utilisation durable de la biodiversité, notamment en augmentant significativement le recours à des pratiques respectueuses de la biodiversité, telles que l'intensification durable, l'agroécologie et d'autres approches innovantes, contribuant ainsi à améliorer la résilience, l'efficacité et la productivité à long terme de ces systèmes de production, ainsi qu'à renforcer la sécurité alimentaire, à conserver et à restaurer la biodiversité et à préserver les contributions de la nature aux populations, y compris les fonctions et les services écosystémiques."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 11: Nature's Contributions to People ##
 
@@ -471,7 +472,7 @@ kmgbf:target_11 a :Target ;
     skos:definition """Restore, maintain and enhance nature's contributions to people, including ecosystem functions and services, such as regulation of air, water, and climate, soil health, pollination and reduction of disease risk, as well as protection from natural hazards and disasters, through nature-based solutions and/or ecosystem-based approaches for the benefit of all people and nature."""@en ,
                     """Restaurar, mantener y mejorar las contribuciones de la naturaleza a las personas, entre ellas las funciones y los servicios de los ecosistemas, tales como la regulación del aire, el agua y el clima, la salud de los suelos, la polinización y la reducción del riesgo de enfermedades, así como la protección frente a peligros y desastres naturales, mediante soluciones basadas en la naturaleza y/o enfoques basados en los ecosistemas en beneficio de todas las personas y la naturaleza."""@es ,
                     """Restaurer, préserver et renforcer les contributions de la nature aux populations, y compris les fonctions et services écosystémiques, tels que la régulation de l'air, de l'eau et du climat, la santé des sols, la pollinisation et la réduction des risques de maladie, ainsi que la protection contre les risques et catastrophes naturels, grâce à des solutions fondées sur la nature et/ou des approches écosystémiques dans l'intérêt de toutes les populations et de la nature."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 12: Urban Green and Blue Spaces ##
 
@@ -490,7 +491,7 @@ kmgbf:target_12 a :Target ;
     skos:definition """Significantly increase the area and quality and connectivity of, access to, and benefits from green and blue spaces in urban and densely populated areas sustainably, by mainstreaming the conservation and sustainable use of biodiversity, and ensure biodiversity-inclusive urban planning, enhancing native biodiversity, ecological connectivity and integrity, and improving human health and well-being and connection to nature and contributing to inclusive and sustainable urbanization and the provision of ecosystem functions and services."""@en ,
                     """Aumentar significativamente la superficie, la calidad y la conectividad de los espacios verdes y azules en las zonas urbanas y densamente pobladas, así como el acceso a ellos y los beneficios que se deriven de ellos, de manera sostenible, integrando la conservación y la utilización sostenible de la diversidad biológica, y garantizar una planificación urbana que tenga en cuenta la diversidad biológica, mejorando la diversidad biológica autóctona, la conectividad y la integridad ecológicas y mejorando la salud y el bienestar de los seres humanos y su conexión con la naturaleza, así como contribuyendo a una urbanización inclusiva y sostenible y a la prestación de funciones y servicios de los ecosistemas."""@es ,
                     """Augmenter significativement la superficie, la qualité et la connectivité des espaces verts et bleus dans les zones urbaines et densément peuplées, ainsi que l'accès à ces espaces et les avantages qu'ils procurent, en systématisant la conservation et l'utilisation durable de la biodiversité, en tenant compte de celle-ci dans l'aménagement urbain, en améliorant la biodiversité ainsi que la connectivité et l'intégrité écologiques indigènes, en améliorant la santé et le bien-être des personnes et leur lien avec la nature, ainsi qu'en favorisant une urbanisation durable et inclusive et en soutenant la fourniture de fonctions et de services écosystémiques."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 13: Access and Benefit Sharing ##
 
@@ -509,7 +510,7 @@ kmgbf:target_13 a :Target ;
     skos:definition """Take effective legal, policy, administrative and capacity-building measures at all levels, as appropriate, to ensure the fair and equitable sharing of benefits that arise from the utilization of genetic resources and from digital sequence information on genetic resources, as well as traditional knowledge associated with genetic resources, and facilitating appropriate access to genetic resources, and by 2030 facilitating a significant increase of the benefits shared, in accordance with applicable international access and benefit-sharing instruments."""@en ,
                     """Tomar medidas jurídicas, de políticas, administrativas y de creación de capacidad a todos los niveles, según proceda, con miras a lograr la participación justa y equitativa en los beneficios que se deriven de la utilización de los recursos genéticos y de la información digital sobre secuencias de recursos genéticos, así como de los conocimientos tradicionales asociados a los recursos genéticos, y a lograr que para 2030 se haya propiciado un aumento significativo de los beneficios compartidos, de conformidad con los instrumentos internacionales de acceso y participación en los beneficios aplicables."""@es ,
                     """Prendre des mesures juridiques, politiques, administratives et de renforcement des capacités efficaces à tous les niveaux, selon qu'il convient, pour assurer le partage juste et équitable des avantages découlant de l'utilisation des ressources génétiques et de l'information de séquençage numérique sur les ressources génétiques, ainsi que des connaissances traditionnelles associées aux ressources génétiques, et faciliter l'accès approprié aux ressources génétiques, et, d'ici à 2030, favoriser une augmentation significative des avantages partagés, dans le respect des instruments internationaux applicables en matière d'accès et de partage des avantages."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 14: Mainstreaming Biodiversity ##
 
@@ -528,7 +529,7 @@ kmgbf:target_14 a :Target ;
     skos:definition """Ensure the full integration of biodiversity and its multiple values into policies, regulations, planning and development processes, poverty eradication strategies, strategic environmental assessments, environmental impact assessments and, as appropriate, national accounting, within and across all levels of government and across all sectors, in particular those with significant impacts on biodiversity, progressively aligning all relevant public and private activities, fiscal and financial flows with the goals and targets of this framework."""@en ,
                     """Garantizar la integración plena de la biodiversidad y sus múltiples valores en las políticas, los reglamentos, los procesos de planificación y de desarrollo, las estrategias de erradicación de la pobreza, las evaluaciones ambientales estratégicas y las evaluaciones de impacto ambiental y, cuando proceda, las cuentas nacionales, en todos los niveles de gobierno y todos los sectores, en particular aquellos que provocan impactos significativos en la biodiversidad, armonizando progresivamente todas las actividades públicas y privadas pertinentes y las corrientes financieras y fiscales con los objetivos y las metas del presente Marco."""@es ,
                     """Veiller à la pleine prise en compte de la biodiversité et de ses multiples valeurs dans l'élaboration des politiques, des réglementations, des processus de planification et de développement, des stratégies d'élimination de la pauvreté, des évaluations environnementales stratégiques, des évaluations d'impact environnemental et, le cas échéant, dans la comptabilité nationale, à tous les niveaux de gouvernement et dans tous les secteurs, en particulier dans ceux qui ont d'importantes incidences sur la biodiversité, et aligner progressivement toutes les activités publiques et privées concernées, ainsi que les flux fiscaux et financiers, sur les objectifs et les cibles du présent cadre."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 15: Business and Biodiversity ##
 
@@ -547,7 +548,7 @@ kmgbf:target_15 a :Target ;
     skos:definition """Take legal, administrative or policy measures to encourage and enable business, and in particular to ensure that large and transnational companies and financial institutions: (a) Regularly monitor, assess, and transparently disclose their risks, dependencies and impacts on biodiversity, including with requirements for all large as well as transnational companies and financial institutions along their operations, supply and value chains and portfolios; (b) Provide information needed to consumers to promote sustainable consumption patterns; (c) Report on compliance with access and benefit-sharing regulations and measures, as applicable; in order to progressively reduce negative impacts on biodiversity, increase positive impacts, reduce biodiversity-related risks to business and financial institutions, and promote actions to ensure sustainable patterns of production."""@en ,
                     """Tomar medidas jurídicas, administrativas o de políticas para alentar y habilitar a las empresas para que, y en particular, en el caso de las empresas transnacionales y las instituciones financieras, garantizar que: a) Hagan periódicamente un seguimiento y una evaluación de sus riesgos, dependencias de la biodiversidad e impactos en ella, y los den a conocer de manera transparente, incluido, en el caso de las grandes empresas y las empresas transnacionales e instituciones financieras, mediante el establecimiento de requisitos a lo largo de sus operaciones, cadenas de suministro y de valor y carteras; b) Proporcionen la información necesaria a los consumidores a fin de promover modalidades de consumo sostenibles; c) Informen sobre el cumplimiento de los reglamentos y medidas de acceso y participación en los beneficios, según proceda; con el fin de reducir progresivamente los impactos negativos en la biodiversidad, aumentar los impactos positivos, reducir los riesgos relacionados con la biodiversidad para las empresas y las instituciones financieras, y promover acciones encaminadas a lograr modalidades de producción sostenibles."""@es ,
                     """Prendre des mesures juridiques, administratives ou de politique générale visant à inciter les entreprises à agir et à leur donner les moyens de le faire, notamment en veillant à ce que les grandes entreprises et les entreprises transnationales, ainsi que les institutions financières : a) Contrôlent, évaluent et communiquent régulièrement et de manière transparente leurs risques, dépendances et incidences sur la biodiversité, y compris en prévoyant des dispositions applicables à toutes les grandes entreprises ainsi qu'aux entreprises transnationales et aux institutions financières concernant leurs opérations, leurs chaînes d'approvisionnement et de valeur, ainsi que leurs portefeuilles ; b) Informent les consommateurs en vue de promouvoir des modes de consommation durables ; c) Rendent compte du respect des dispositions et mesures relatives à l'accès et au partage des avantages, en tant que de besoin ; afin de réduire progressivement les incidences négatives sur la biodiversité, d'accroître les incidences positives, de réduire les risques liés à la biodiversité pour les entreprises et les institutions financières, et de promouvoir des mesures propres à garantir des modes de production durables."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 16: Sustainable Consumption ##
 
@@ -566,7 +567,7 @@ kmgbf:target_16 a :Target ;
     skos:definition """Ensure that people are encouraged and enabled to make sustainable consumption choices including by establishing supportive policy, legislative or regulatory frameworks, improving education and access to relevant and accurate information and alternatives, and by 2030, reduce the global footprint of consumption in an equitable manner, including through halving global food waste, significantly reducing overconsumption and substantially reducing waste generation, in order for all people to live well in harmony with Mother Earth."""@en ,
                     """Garantizar que se aliente y apoye a las personas para que elijan opciones de consumo sostenible, entre otras cosas mediante el establecimiento de marcos de políticas, legislativos o normativos de apoyo, mejorando la enseñanza y el acceso a información pertinente y precisa y alternativas, y, para 2030, reducir la huella mundial del consumo de manera equitativa, entre otras cosas reduciendo a la mitad el desperdicio mundial de alimentos, reduciendo significativamente el consumo excesivo, y reduciendo sustancialmente la generación de desechos, a fin de que todas las personas puedan vivir bien en armonía con la Madre Tierra."""@es ,
                     """Encourager les populations à faire des choix de consommation durables et à leur donner les moyens de le faire, notamment en créant des cadres politiques, législatifs ou réglementaires propices, en améliorant l'éducation ainsi que l'accès à des informations pertinentes et précises et à des solutions de substitution, et, d'ici à 2030, réduire l'empreinte mondiale de la consommation de manière équitable, notamment en réduisant de moitié le gaspillage alimentaire mondial, en limitant significativement la surconsommation et en diminuant considérablement la production de déchets, de manière à permettre à tous de vivre agréablement en harmonie avec la Terre nourricière."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 17: Biosafety ##
 
@@ -585,7 +586,7 @@ kmgbf:target_17 a :Target ;
     skos:definition """Establish, strengthen capacity for, and implement in all countries biosafety measures as set out in Article 8(g) of the Convention on Biological Diversity and measures for the handling of biotechnology and distribution of its benefits as set out in Article 19 of the Convention."""@en ,
                     """En todos los países, establecer y aplicar medidas de seguridad de la biotecnología, y reforzar la capacidad al respecto, tal como se establece en el artículo 8 g) del Convenio sobre la Diversidad Biológica, y medidas para la gestión de la biotecnología y la distribución de sus beneficios, tal como se establece en el artículo 19 del Convenio."""@es ,
                     """Créer et renforcer les capacités aux fins de l'application dans tous les pays des mesures relatives à la sécurité biotechnologique prévues à l'article 8 g), de la Convention sur la diversité biologique, ainsi que des mesures relatives à la gestion des biotechnologies et au partage de leurs avantages prévues à l'article 19 de celle-ci."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 18: Harmful Incentives ##
 
@@ -604,7 +605,7 @@ kmgbf:target_18 a :Target ;
     skos:definition """Identify by 2025, and eliminate, phase out or reform incentives, including subsidies, harmful for biodiversity, in a proportionate, just, fair, effective and equitable way, while substantially and progressively reducing them by at least 500 billion United States dollars per year by 2030, starting with the most harmful incentives, and scale up positive incentives for the conservation and sustainable use of biodiversity."""@en ,
                     """Identificar para 2025 y eliminar, eliminar gradualmente o reformar los incentivos, entre ellos los subsidios, perjudiciales para la diversidad biológica, de manera proporcionada, justa, efectiva y equitativa, reduciéndolos sustancial y progresivamente en al menos 500.000 millones de dólares de los Estados Unidos al año para 2030, empezando por los incentivos más perjudiciales, y aumentar los incentivos positivos para la conservación y la utilización sostenible de la diversidad biológica."""@es ,
                     """Recenser, d'ici à 2025, les incitations, y compris les subventions, préjudiciables à la biodiversité et les éliminer, les supprimer progressivement ou les modifier de manière proportionnée, juste, efficace et équitable, tout en les réduisant substantiellement et progressivement d'au moins 500 milliards de dollars par an d'ici à 2030, en commençant par les incitations les plus préjudiciables, et renforcer les incitations positives en faveur de la conservation et de l'utilisation durable de la biodiversité."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 19: Financial Resources ##
 
@@ -623,7 +624,7 @@ kmgbf:target_19 a :Target ;
     skos:definition """Substantially and progressively increase the level of financial resources from all sources, in an effective, timely and easily accessible manner, including domestic, international, public and private resources, in accordance with Article 20 of the Convention, to implement national biodiversity strategies and action plans, by 2030 mobilizing at least 200 billion United States dollars per year, including by: (a) Increasing total biodiversity related international financial resources from developed countries, including official development assistance, and from countries that voluntarily assume obligations of developed country Parties, to developing countries, in particular the least developed countries and small island developing States, as well as countries with economies in transition, to at least US$ 20 billion per year by 2025, and to at least US$ 30 billion per year by 2030; (b) Significantly increasing domestic resource mobilization, facilitated by the preparation and implementation of national biodiversity finance plans or similar instruments according to national needs, priorities and circumstances; (c) Leveraging private finance, promoting blended finance, implementing strategies for raising new and additional resources, and encouraging the private sector to invest in biodiversity, including through impact funds and other instruments; (d) Stimulating innovative schemes such as payment for ecosystem services, green bonds, biodiversity offsets and credits, benefit-sharing mechanisms, with environmental and social safeguards; (e) Optimizing co-benefits and synergies of finance targeting the biodiversity and climate crises; (f) Enhancing the role of collective actions, including by indigenous peoples and local communities, Mother Earth centric actions and non-market-based approaches including community based natural resource management and civil society cooperation and solidarity aimed at the conservation of biodiversity; (g) Enhancing the effectiveness, efficiency and transparency of resource provision and use."""@en ,
                     """Aumentar sustancial y progresivamente, de manera eficaz, oportuna y de fácil acceso, el nivel de recursos financieros de todas las fuentes, entre ellos los recursos nacionales, internacionales, públicos y privados, de conformidad con el artículo 20 del Convenio, a fin de implementar las estrategias y planes de acción nacionales en materia de biodiversidad, movilizando al menos 200.000 millones de dólares de los Estados Unidos al año para 2030, entre otras cosas: a) Aumentando el total de recursos financieros internacionales relacionados con la biodiversidad procedentes de los países desarrollados, incluida la asistencia oficial para el desarrollo, y de los países que asuman voluntariamente las obligaciones de las Partes que son países desarrollados, para los países en desarrollo, en particular, los países menos adelantados y los pequeños Estados insulares en desarrollo, así como los países con economías en transición, al menos a 20.000 millones de dólares de los Estados Unidos al año para 2025 y al menos a 30.000 millones de dólares al año para 2030; b) Aumentando significativamente la movilización de recursos nacionales, facilitada mediante la preparación y aplicación de planes nacionales de financiación de la biodiversidad o instrumentos similares de acuerdo con las necesidades, prioridades y circunstancias nacionales; c) Apalancando la financiación privada, promoviendo la financiación combinada, aplicando estrategias de obtención de recursos nuevos y adicionales, y alentando al sector privado a invertir en la biodiversidad, entre otras cosas, mediante fondos de impacto y otros instrumentos; d) Estimulando planes innovadores, como pagos por los servicios de los ecosistemas, bonos verdes, compensaciones y créditos de biodiversidad y mecanismos de participación en los beneficios, con salvaguardias ambientales y sociales; e) Optimizando los beneficios secundarios y las sinergias de la financiación destinada a atender las crisis de la biodiversidad y del clima; f) Reforzando el papel de las acciones colectivas, entre ellas las de los pueblos indígenas y las comunidades locales, las acciones centradas en la Madre Tierra y los enfoques no relacionados con el mercado, incluida la gestión comunitaria de los recursos naturales y la cooperación y solidaridad de la sociedad civil dirigidas a la conservación de la diversidad biológica; g) Reforzando la eficacia, eficiencia y transparencia de la provisión y utilización de los recursos."""@es ,
                     """Augmenter sensiblement et progressivement les ressources financières provenant de toutes les sources, de manière efficace, opportune et en facilitant leur accès, y compris les ressources nationales, internationales, publiques et privées, conformément à l'article 20 de la Convention, afin de mettre en œuvre les stratégies et plans d'action nationaux pour la diversité biologique, en mobilisant au moins 200 milliards de dollars par an d'ici à 2030, et notamment en s'employant à : a) Augmenter le montant total des ressources financières internationales liées à la biodiversité provenant des pays développés, y compris l'aide publique au développement, et des pays qui remplissent volontairement les engagements des pays développés Parties, en faveur des pays en développement, en particulier des pays les moins avancés et des petits États insulaires en développement, ainsi que des pays à économie en transition, pour le porter à au moins 20 milliards de dollars par an d'ici à 2025, et à au moins 30 milliards de dollars par an d'ici à 2030 ; b) Accroître significativement la mobilisation des ressources nationales, grâce à l'élaboration et à la mise en œuvre de plans nationaux de financement de la biodiversité ou d'instruments similaires en tenant compte des besoins, des priorités et du contexte des pays ; c) Tirer parti des financements privés, promouvoir les financements mixtes, mettre en œuvre des stratégies de mobilisation de ressources nouvelles et supplémentaires, et encourager le secteur privé à investir dans la biodiversité, notamment grâce à des fonds à impact et à d'autres instruments ; d) Promouvoir des systèmes innovants tels que le paiement des services écosystémiques, les obligations vertes, les crédits et compensations en matière de biodiversité et les mécanismes de partage des avantages, grâce à mesures de protection environnementales et sociales ; e) Tirer le meilleur parti des avantages connexes et des synergies des financements ciblant les crises liées à la biodiversité et au climat ; f) Renforcer les actions collectives, notamment celles des peuples autochtones et des communautés locales, les actions en faveur de la Terre nourricière et les approches non commerciales, y compris les approches communautaires de gestion des ressources naturelles, ainsi que la coopération et la solidarité de la société civile, en vue de préserver la diversité biologique ; g) Améliorer l'efficacité, l'efficience et la transparence en matière de fourniture et d'utilisation des ressources."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 20: Capacity Building ##
 
@@ -642,7 +643,7 @@ kmgbf:target_20 a :Target ;
     skos:definition """Strengthen capacity-building and development, access to and transfer of technology, and promote development of and access to innovation and technical and scientific cooperation, including through South-South, North-South and triangular cooperation, to meet the needs for effective implementation, particularly in developing countries, fostering joint technology development and joint scientific research programmes for the conservation and sustainable use of biodiversity and strengthening scientific research and monitoring capacities, commensurate with the ambition of the goals and targets of the framework."""@en ,
                     """Fortalecer la creación y el desarrollo de capacidad, así como el acceso a tecnología y transferencia de tecnología, y promover el desarrollo y el acceso a la innovación y la cooperación científica y técnica, incluido a través de la cooperación Sur-Sur, Norte-Sur y triangular, para satisfacer las necesidades de una implementación eficaz, en particular en los países en desarrollo, promoviendo el desarrollo conjunto de tecnología y programas conjuntos de investigación científica para la conservación y la utilización sostenible de la diversidad biológica y el fortalecimiento de las capacidades de investigación científica y de seguimiento, en forma acorde con el nivel de ambición de los objetivos y las metas del Marco."""@es ,
                     """Accroître le renforcement et le développement des capacités, l'accès aux technologies et leur transfert, et promouvoir l'innovation et la coopération technique et scientifique et l'accès à celles-ci, notamment dans le cadre de la coopération Sud-Sud, Nord-Sud et triangulaire, afin favoriser une mise en œuvre efficace, en particulier dans les pays en développement, en encourageant la collaboration dans le développement de technologies et l'élaboration de programmes de recherche scientifique en matière de conservation et d'utilisation durable de la biodiversité et en renforçant les capacités de recherche scientifique et de suivi connexes, et veiller à ce que ces actions soient à la mesure de l'ambition des objectifs et des cibles du cadre mondial."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 21: Knowledge and Data ##
 
@@ -661,7 +662,7 @@ kmgbf:target_21 a :Target ;
     skos:definition """Ensure that the best available data, information and knowledge, are accessible to decision makers, practitioners and the public to guide effective and equitable governance, integrated and participatory management of biodiversity, and to strengthen communication, awareness-raising, education, monitoring, research and knowledge management and, also in this context, traditional knowledge, innovations, practices and technologies of indigenous peoples and local communities should only be accessed with their free, prior and informed consent, in accordance with national legislation."""@en ,
                     """Garantizar que los responsables de la toma de decisiones, los profesionales y el público tengan acceso a los mejores datos, información y conocimientos disponibles a fin de guiar una gobernanza eficaz y equitativa y una gestión integrada y participativa de la biodiversidad, y de fortalecer la comunicación, la sensibilización, la educación, el seguimiento, la investigación y la gestión de los conocimientos y, también en este contexto, garantizar que se acceda a los conocimientos tradicionales, innovaciones, prácticas y tecnologías de los pueblos indígenas y las comunidades locales únicamente con su consentimiento libre, previo e informado, de acuerdo con la legislación nacional."""@es ,
                     """Faire en sorte que les décideurs, les praticiens et le public aient accès aux meilleures données, informations et connaissances disponibles afin de favoriser une gouvernance efficace et équitable et une gestion intégrée et participative de la biodiversité, ainsi que de renforcer la communication, la sensibilisation, l'éducation, le suivi, la recherche et la gestion des connaissances ; dans ce contexte également, les connaissances, innovations, pratiques et technologies traditionnelles des peuples autochtones et des communautés locales ne devraient être accessibles qu'avec leur consentement préalable, libre et éclairé, conformément à la législation nationale."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 22: Participation and Rights ##
 
@@ -680,7 +681,7 @@ kmgbf:target_22 a :Target ;
     skos:definition """Ensure the full, equitable, inclusive, effective and gender-responsive representation and participation in decision-making, and access to justice and information related to biodiversity by indigenous peoples and local communities, respecting their cultures and their rights over lands, territories, resources, and traditional knowledge, as well as by women and girls, children and youth, and persons with disabilities and ensure the full protection of environmental human rights defenders."""@en ,
                     """Garantizar la participación y representación plena, equitativa, inclusiva, efectiva y con perspectiva de género de los pueblos indígenas y las comunidades locales en la toma de decisiones, y su acceso a la justicia y a información en materia de biodiversidad, respetando sus culturas y sus derechos sobre las tierras, los territorios, los recursos y los conocimientos tradicionales, así como de las mujeres y las niñas, la infancia y la juventud y las personas con discapacidad, y garantizar la protección plena de los defensores y las defensoras de los derechos humanos relacionados con el medio ambiente."""@es ,
                     """Assurer une représentation et une participation pleines et entières, équitables, inclusives, efficaces et tenant compte du genre des peuples autochtones et des communautés locales aux processus décisionnels, ainsi que leur accès à la justice et aux informations relatives à la biodiversité, dans le respect de leurs cultures et de leurs droits sur leurs terres, territoires, ressources et connaissances traditionnelles, tout en veillant à inclure les femmes et les filles, les enfants et les jeunes, ainsi que les personnes handicapées, et garantir la pleine protection des défenseurs et défenseuses des droits de l'homme en matière d'environnement."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 ## TARGET 23: Gender Equality ##
 
@@ -699,7 +700,7 @@ kmgbf:target_23 a :Target ;
     skos:definition """Ensure gender equality in the implementation of the framework through a gender-responsive approach where all women and girls have equal opportunity and capacity to contribute to the three objectives of the Convention, including by recognizing their equal rights and access to land and natural resources and their full, equitable, meaningful and informed participation and leadership at all levels of action, engagement, policy and decision-making related to biodiversity."""@en ,
                     """Garantizar la igualdad de género en la implementación del Marco mediante un enfoque con perspectiva de género en el cual todas las mujeres y las niñas tengan igualdad de oportunidades y capacidad para contribuir a los tres objetivos del Convenio, entre otras cosas reconociendo su igualdad en cuanto a los derechos y el acceso a las tierras y a los recursos naturales y su participación y liderazgo plenos, equitativos, significativos e informados en todos los niveles de acción, participación, formulación de políticas y toma de decisiones relacionados con la biodiversidad."""@es ,
                     """Assurer l'égalité des genres dans la mise en œuvre du cadre grâce à une approche tenant compte du genre, permettant à toutes les femmes et à toutes les filles de bénéficier des mêmes possibilités et capacités de contribuer à la réalisation des trois objectifs de la Convention, notamment en reconnaissant l'égalité de leurs droits et de leur accès aux terres et aux ressources naturelles, ainsi qu'en favorisant leur participation et leur leadership pleins, équitables, significatifs et éclairés à tous les niveaux de l'action, de la participation, de l'élaboration des politiques et de la prise de décision en matière de biodiversité."""@fr ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
 
 @prefix : <http://metadata.cbd.int/kmgbf/ontology#> .
 @prefix kmgbf: <http://metadata.cbd.int/kmgbf/> .
@@ -726,7 +727,7 @@ kmgbf:target_23 a :Target ;
 ## All indicators share the same source ##
 kmgbf:indicatorScheme a skos:ConceptScheme ;
     skos:prefLabel "KMGBF Monitoring Framework Indicators"@en ;
-    dct:source <https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf> .
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.1 a :Indicator ;
     :indicatorCode "A.1" ;
@@ -734,7 +735,8 @@ kmgbf:indicator_A.1 a :Indicator ;
     skos:prefLabel "Liste rouge des écosystèmes"@fr ;
     skos:prefLabel "Lista Roja de Ecosistemas"@es ;
     :isHeadlineFor kmgbf:goal_A, kmgbf:target_1 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.2 a :Indicator ;
     :indicatorCode "A.2" ;
@@ -742,7 +744,8 @@ kmgbf:indicator_A.2 a :Indicator ;
     skos:prefLabel "Étendue des écosystèmes naturels"@fr ;
     skos:prefLabel "Extensión de los ecosistemas naturales"@es ;
     :isHeadlineFor kmgbf:goal_A, kmgbf:target_1 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.3 a :Indicator ;
     :indicatorCode "A.3" ;
@@ -750,7 +753,8 @@ kmgbf:indicator_A.3 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge"@fr ;
     skos:prefLabel "Índice de la Lista Roja"@es ;
     :isHeadlineFor kmgbf:goal_A, kmgbf:target_4 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.4 a :Indicator ;
     :indicatorCode "A.4" ;
@@ -758,7 +762,8 @@ kmgbf:indicator_A.4 a :Indicator ;
     skos:prefLabel "Pourcentage de populations au sein d’une espèce dont la taille effective est supérieure à 500 individus"@fr ;
     skos:prefLabel "Proporción de poblaciones dentro de especies con un tamaño de población efectivo mayor a 500"@es ;
     :isHeadlineFor kmgbf:goal_A, kmgbf:target_4 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.1 a :Indicator ;
     :indicatorCode "B.1" ;
@@ -766,7 +771,8 @@ kmgbf:indicator_B.1 a :Indicator ;
     skos:prefLabel "Services rendus par les écosystèmes"@fr ;
     skos:prefLabel "Servicios brindados por los ecosistemas"@es ;
     :isHeadlineFor kmgbf:goal_B, kmgbf:target_11 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.b a :Indicator ;
     :indicatorCode "B.b" ;
@@ -774,7 +780,8 @@ kmgbf:indicator_B.b a :Indicator ;
     skos:prefLabel "Nombre de pays disposant de politiques ou des mesures pour mettre en œuvre et surveiller l’utilisation durable de la biodiversité et la préservation et le renforcement des contributions de la nature à l’homme, y compris les fonctions et services écosystémiques"@fr ;
     skos:prefLabel "Número de países que cuentan con políticas o medidas para implementar y hacer un seguimiento de la utilización sostenible de la diversidad biológica y el mantenimiento y la mejora de las contribuciones de la naturaleza a las personas, incluidas las funciones y los servicios de los ecosistemas"@es ;
     :isBinaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_C.1 a :Indicator ;
     :indicatorCode "C.1" ;
@@ -782,7 +789,8 @@ kmgbf:indicator_C.1 a :Indicator ;
     skos:prefLabel "Avantages monétaires reçus conformément aux instruments internationaux applicables en matière d’accès et de partage des avantages"@fr ;
     skos:prefLabel "Beneficios monetarios percibidos de conformidad con instrumentos aplicables de acceso y participación en los beneficios acordados internacionalmente"@es ;
     :isHeadlineFor kmgbf:goal_C, kmgbf:target_13 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_C.2 a :Indicator ;
     :indicatorCode "C.2" ;
@@ -790,7 +798,8 @@ kmgbf:indicator_C.2 a :Indicator ;
     skos:prefLabel "Avantages non monétaires découlant des instruments internationaux applicables en matière d’accès et de partage des avantages"@fr ;
     skos:prefLabel "Beneficios no monetarios derivados de instrumentos internacionales aplicables de acceso y participación en los beneficios"@es ;
     :isHeadlineFor kmgbf:goal_C, kmgbf:target_13 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_13.b a :Indicator ;
     :indicatorCode "13.b" ;
@@ -798,7 +807,8 @@ kmgbf:indicator_13.b a :Indicator ;
     skos:prefLabel "Nombre de pays qui ont pris des mesures juridiques, politiques, administratives et de renforcement des capacités efficaces à tous les niveaux, selon qu’il convient, pour assurer le partage juste et équitable des avantages découlant de l’utilisation des ressources génétiques et de l’information de séquençage numérique sur les ressources génétiques, ainsi que des connaissances traditionnelles associées aux ressources génétiques"@fr ;
     skos:prefLabel "Número de países que han adoptado medidas jurídicas, de políticas, administrativas y de creación de capacidad eficaces en todos los niveles, según proceda, tendientes a garantizar la participación justa y equitativa en los beneficios que se deriven de la utilización de los recursos genéticos y de la información digital sobre secuencias de recursos genéticos, así como de los conocimientos tradicionales asociados a los recursos genéticos"@es ;
     :isBinaryFor kmgbf:goal_C, kmgbf:target_13 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.1 a :Indicator ;
     :indicatorCode "D.1" ;
@@ -806,7 +816,8 @@ kmgbf:indicator_D.1 a :Indicator ;
     skos:prefLabel "Financement public international, y compris l’aide publique au développement pour la conservation et l’utilisation durable de la biodiversité et des écosystèmes"@fr ;
     skos:prefLabel "Financiación pública internacional, incluida asistencia oficial para el desarrollo para la conservación y la utilización sostenible de la diversidad biológica y los ecosistemas"@es ;
     :isHeadlineFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.2 a :Indicator ;
     :indicatorCode "D.2" ;
@@ -814,7 +825,8 @@ kmgbf:indicator_D.2 a :Indicator ;
     skos:prefLabel "Financement public national pour la conservation et l’utilisation durable de la biodiversité et des écosystèmes"@fr ;
     skos:prefLabel "Financiación pública nacional para la conservación y la utilización sostenible de la diversidad biológica y los ecosistemas"@es ;
     :isHeadlineFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.3 a :Indicator ;
     :indicatorCode "D.3" ;
@@ -822,7 +834,8 @@ kmgbf:indicator_D.3 a :Indicator ;
     skos:prefLabel "Financement privé (national et international) pour la conservation et l’utilisation durable de la biodiversité et des écosystèmes"@fr ;
     skos:prefLabel "Financiación privada (nacional e internacional) para la conservación y la utilización sostenible de la diversidad biológica y los ecosistemas"@es ;
     :isHeadlineFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_1.1 a :Indicator ;
     :indicatorCode "1.1" ;
@@ -830,7 +843,8 @@ kmgbf:indicator_1.1 a :Indicator ;
     skos:prefLabel "Pourcentage de la surface terrestre et maritime faisant l’objet d’une planification spatiale respectueuse de la biodiversité"@fr ;
     skos:prefLabel "Porcentaje de superficie terrestre y marina cubierta por planes espaciales que tienen en cuenta la diversidad biológica"@es ;
     :isHeadlineFor kmgbf:target_1 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_1.b a :Indicator ;
     :indicatorCode "1.b" ;
@@ -838,7 +852,8 @@ kmgbf:indicator_1.b a :Indicator ;
     skos:prefLabel "Nombre de pays disposant d’une planification spatiale participative, intégrée et respectueuse de la biodiversité ou de processus de gestion du changement d’affectation des terres et des mers efficaces, afin de réduire la perte de zones de grande importante pour la biodiversité à un niveau proche de zéro d’ici à 2030"@fr ;
     skos:prefLabel "Número de países que utilizan una planificación espacial participativa integrada que tiene en cuenta la diversidad biológica o procesos de gestión eficaces que abordan el cambio en el uso de la tierra y los océanos con el fin de que la pérdida de zonas de suma importancia para la diversidad biológica se acerque a cero para 2030"@es ;
     :isBinaryFor kmgbf:target_1 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_2.1 a :Indicator ;
     :indicatorCode "2.1" ;
@@ -846,7 +861,8 @@ kmgbf:indicator_2.1 a :Indicator ;
     skos:prefLabel "Zone en cours de restauration"@fr ;
     skos:prefLabel "Superficie sujeta a restauración"@es ;
     :isHeadlineFor kmgbf:target_2 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.1 a :Indicator ;
     :indicatorCode "3.1" ;
@@ -854,7 +870,8 @@ kmgbf:indicator_3.1 a :Indicator ;
     skos:prefLabel "Couverture des zones protégées et autres mesures efficaces de conservation par zone"@fr ;
     skos:prefLabel "Cobertura de áreas protegidas y otras medidas de conservación eficaces basadas en áreas"@es ;
     :isHeadlineFor kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.1 a :Indicator ;
     :indicatorCode "5.1" ;
@@ -862,7 +879,8 @@ kmgbf:indicator_5.1 a :Indicator ;
     skos:prefLabel "Pourcentage des stocks halieutiques se trouvant à des niveaux biologiquement viables"@fr ;
     skos:prefLabel "Proporción de poblaciones de peces cuyos niveles son biológicamente sostenibles"@es ;
     :isHeadlineFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.b a :Indicator ;
     :indicatorCode "5.b" ;
@@ -870,7 +888,8 @@ kmgbf:indicator_5.b a :Indicator ;
     skos:prefLabel "Nombre de pays disposant d’instruments juridiques ou d’autres cadres politiques de réglementation du commerce des espèces sauvages"@fr ;
     skos:prefLabel "Número de países que cuentan con instrumentos jurídicos u otros marcos de políticas que regulan el comercio de especies silvestres"@es ;
     :isBinaryFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_6.1 a :Indicator ;
     :indicatorCode "6.1" ;
@@ -878,7 +897,8 @@ kmgbf:indicator_6.1 a :Indicator ;
     skos:prefLabel "Taux d’établissement des espèces exotiques envahissantes"@fr ;
     skos:prefLabel "Tasa de establecimiento de especies exóticas invasoras"@es ;
     :isHeadlineFor kmgbf:target_6 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_6.b a :Indicator ;
     :indicatorCode "6.b" ;
@@ -886,7 +906,8 @@ kmgbf:indicator_6.b a :Indicator ;
     skos:prefLabel "Nombre de pays adoptant des réglementations, des processus et des mesures pertinents pour réduire les incidences des espèces exotiques envahissantes"@fr ;
     skos:prefLabel "Número de países que adoptan reglamentaciones, procesos y medidas pertinentes para reducir el impacto de las especies exóticas invasoras"@es ;
     :isBinaryFor kmgbf:target_6 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.1 a :Indicator ;
     :indicatorCode "7.1" ;
@@ -895,7 +916,8 @@ kmgbf:indicator_7.1 a :Indicator ;
     skos:prefLabel "Índice de eutrofización costera"@es ;
     :isHeadlineFor kmgbf:target_7 ;
     :isComplementaryFor kmgbf:target_8 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.2 a :Indicator ;
     :indicatorCode "7.2" ;
@@ -903,7 +925,8 @@ kmgbf:indicator_7.2 a :Indicator ;
     skos:prefLabel "Concentration de l’environnement en pesticides et/ou toxicité totale appliquée agrégée"@fr ;
     skos:prefLabel "Concentración de plaguicidas en el medio ambiente y/o toxicidad total aplicada sin desglosar"@es ;
     :isHeadlineFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_8.b a :Indicator ;
     :indicatorCode "8.b" ;
@@ -911,7 +934,8 @@ kmgbf:indicator_8.b a :Indicator ;
     skos:prefLabel "Nombre de pays disposant de politiques visant à minimiser les répercussions des changements climatiques et de l’acidification des océans sur la biodiversité et à minimiser les répercussions négatives et à favoriser les incidences positives de l’action climatique sur la biodiversité"@fr ;
     skos:prefLabel "Número de países que cuentan con políticas para minimizar el impacto del cambio climático y la acidificación de los océanos en la diversidad biológica y para minimizar los impactos negativos de la acción por el clima en la diversidad biológica y fomentar los impactos positivos"@es ;
     :isBinaryFor kmgbf:target_8 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_9.1 a :Indicator ;
     :indicatorCode "9.1" ;
@@ -919,7 +943,8 @@ kmgbf:indicator_9.1 a :Indicator ;
     skos:prefLabel "Avantages découlant de l’utilisation durable des espèces sauvages"@fr ;
     skos:prefLabel "Beneficios de la utilización sostenible de especies silvestres"@es ;
     :isHeadlineFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_9.2 a :Indicator ;
     :indicatorCode "9.2" ;
@@ -927,7 +952,8 @@ kmgbf:indicator_9.2 a :Indicator ;
     skos:prefLabel "Pourcentage de la population occupant des emplois traditionnels"@fr ;
     skos:prefLabel "Porcentaje de la población que trabaja en ocupaciones tradicionales"@es ;
     :isHeadlineFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_9.b a :Indicator ;
     :indicatorCode "9.b" ;
@@ -935,7 +961,8 @@ kmgbf:indicator_9.b a :Indicator ;
     skos:prefLabel "Nombre de pays ayant mis en place des politiques de gestion et d’utilisation durables des espèces sauvages, de façon à procurer des avantages sociaux, économiques et environnementaux aux populations et à protéger et promouvoir les pratiques traditionnelles d’utilisation durable des peuples autochtones et communautés locales"@fr ;
     skos:prefLabel "Número de países que cuentan con políticas para gestionar de manera sostenible la utilización de especies silvestres, proporcionando beneficios sociales, económicos y ambientales a las personas, y para proteger y fomentar la utilización consuetudinaria sostenible por parte de los pueblos indígenas y las comunidades locales"@es ;
     :isBinaryFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_10.1 a :Indicator ;
     :indicatorCode "10.1" ;
@@ -943,7 +970,8 @@ kmgbf:indicator_10.1 a :Indicator ;
     skos:prefLabel "Pourcentage de la surface agricole consacrée à une agriculture productive et durable"@fr ;
     skos:prefLabel "Proporción de la superficie agrícola en que se practica una agricultura productiva y sostenible"@es ;
     :isHeadlineFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_10.2 a :Indicator ;
     :indicatorCode "10.2" ;
@@ -951,7 +979,8 @@ kmgbf:indicator_10.2 a :Indicator ;
     skos:prefLabel "Progrès accomplis en faveur de la gestion durable des forêts"@fr ;
     skos:prefLabel "Avances hacia la gestión forestal sostenible"@es ;
     :isHeadlineFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_12.1 a :Indicator ;
     :indicatorCode "12.1" ;
@@ -959,7 +988,8 @@ kmgbf:indicator_12.1 a :Indicator ;
     skos:prefLabel "Part moyenne de la zone bâtie des villes qui est un espace vert ou bleu à usage public pour tous"@fr ;
     skos:prefLabel "Proporción media de la superficie edificada de las ciudades que se dedica a espacios verdes o azules para uso público de todos"@es ;
     :isHeadlineFor kmgbf:target_12 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_12.b a :Indicator ;
     :indicatorCode "12.b" ;
@@ -967,7 +997,8 @@ kmgbf:indicator_12.b a :Indicator ;
     skos:prefLabel "Nombre de pays disposant d’un plan d’urbanisme tenant compte de la biodiversité et mentionnant des espaces urbains verts ou bleus"@fr ;
     skos:prefLabel "Número de países que disponen de una planificación urbana que tiene en cuenta la diversidad biológica y se refiere a espacios urbanos verdes o azules"@es ;
     :isBinaryFor kmgbf:target_12 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_14.b a :Indicator ;
     :indicatorCode "14.b" ;
@@ -975,7 +1006,8 @@ kmgbf:indicator_14.b a :Indicator ;
     skos:prefLabel "Nombre de pays intégrant la biodiversité et ses multiples valeurs dans les politiques, les réglementations, la planification, les processus de développement, les stratégies d’élimination de la pauvreté et, le cas échéant, dans la comptabilité nationale, à tous les niveaux de gouvernement et dans tous les secteurs, et alignant progressivement toutes les activités publiques et privées concernées, ainsi que les flux fiscaux et financiers sur les objectifs et les cibles du Cadre"@fr ;
     skos:prefLabel "Número de países que integran la diversidad biológica y sus múltiples valores en las políticas, los reglamentos, la planificación, los procesos de desarrollo, las estrategias de erradicación de la pobreza y, según proceda, las cuentas nacionales, a todos los niveles y en todos los sectores, y que armonizan progresivamente todas las actividades públicas y privadas pertinentes y las corrientes fiscales y financieras con los objetivos y metas del Marco"@es ;
     :isBinaryFor kmgbf:target_14 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_15.1 a :Indicator ;
     :indicatorCode "15.1" ;
@@ -983,7 +1015,8 @@ kmgbf:indicator_15.1 a :Indicator ;
     skos:prefLabel "Nombre d’entreprises divulguant leurs risques, dépendances et incidences sur la biodiversité"@fr ;
     skos:prefLabel "Número de empresas que divulgan información sobre sus riesgos, dependencias e impactos relacionados con la diversidad biológica"@es ;
     :isHeadlineFor kmgbf:target_15 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_15.b a :Indicator ;
     :indicatorCode "15.b" ;
@@ -991,7 +1024,8 @@ kmgbf:indicator_15.b a :Indicator ;
     skos:prefLabel "Nombre de pays disposant de mesures juridiques, administratives ou politiques visant à inciter les entreprises à agir et à leur donner les moyens de le faire, notamment en veillant à ce que les grandes entreprises et les entreprises transnationales, ainsi que les institutions financières réduisent progressivement leurs incidences négatives sur la biodiversité, accroissent leurs incidences positives, réduisent leurs risques liés à la biodiversité et promeuvent des mesures propres à garantir des modes de production durables"@fr ;
     skos:prefLabel "Número de países que cuentan con medidas jurídicas, administrativas o de políticas para alentar y habilitar a las empresas e instituciones financieras y, en particular, a las empresas e instituciones financieras grandes y transnacionales, para que reduzcan progresivamente sus impactos negativos en la diversidad biológica, aumenten sus impactos positivos, reduzcan sus riesgos relacionados con la diversidad biológica y promuevan acciones encaminadas a lograr modalidades de producción sostenibles"@es ;
     :isBinaryFor kmgbf:target_15 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.b a :Indicator ;
     :indicatorCode "16.b" ;
@@ -999,7 +1033,8 @@ kmgbf:indicator_16.b a :Indicator ;
     skos:prefLabel "Nombre de pays qui élaborent, adoptent ou mettent en œuvre des instruments politiques visant à encourager et à permettre aux habitants de faire des choix de consommation durables"@fr ;
     skos:prefLabel "Número de países que elaboran, adoptan o aplican instrumentos de políticas dirigidos a alentar y apoyar a las personas para que elijan opciones de consumo sostenible"@es ;
     :isBinaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_17.b a :Indicator ;
     :indicatorCode "17.b" ;
@@ -1007,7 +1042,8 @@ kmgbf:indicator_17.b a :Indicator ;
     skos:prefLabel "Nombre de pays qui ont agi pour appliquer des mesures de prévention des risques biotechnologiques telles qu’énoncées à l’article 8 g) de la Convention et des mesures pour la gestion des biotechnologies et le partage de leurs avantages prévues à l’article 19 de celle-ci"@fr ;
     skos:prefLabel "Número de países que han emprendido acciones para implementar medidas de seguridad de la biotecnología conforme a lo dispuesto en el artículo 8 g) del Convenio y medidas para la gestión de la biotecnología y la participación en sus beneficios conforme a lo dispuesto en el artículo 19"@es ;
     :isBinaryFor kmgbf:target_17 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_18.1 a :Indicator ;
     :indicatorCode "18.1" ;
@@ -1015,7 +1051,8 @@ kmgbf:indicator_18.1 a :Indicator ;
     skos:prefLabel "Mesures d’incitation positive en place pour promouvoir la conservation de la biodiversité et son utilisation durable"@fr ;
     skos:prefLabel "Incentivos positivos establecidos para promover la conservación y la utilización sostenible de la diversidad biológica"@es ;
     :isHeadlineFor kmgbf:target_18 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_18.2 a :Indicator ;
     :indicatorCode "18.2" ;
@@ -1023,7 +1060,8 @@ kmgbf:indicator_18.2 a :Indicator ;
     skos:prefLabel "Valeur des subventions et autres incitations"@fr ;
     skos:prefLabel "Valor de subsidios y otros incentivos perjudiciales para la diversidad biológica"@es ;
     :isHeadlineFor kmgbf:target_18 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_20.b a :Indicator ;
     :indicatorCode "20.b" ;
@@ -1031,7 +1069,8 @@ kmgbf:indicator_20.b a :Indicator ;
     skos:prefLabel "Nombre de pays ayant pris des mesures significatives en vue d’accroître le renforcement et le développement des capacités, l’accès aux technologies et leur transfert, et de promouvoir l’innovation et à la coopération technique et scientifique et l’accès à celles-ci"@fr ;
     skos:prefLabel "Número de países que han adoptado medidas significativas para fortalecer la creación y el desarrollo de capacidad, el acceso a tecnología y la transferencia de tecnología y para promover el desarrollo de innovación, el acceso a innovación y la cooperación científica y técnica"@es ;
     :isBinaryFor kmgbf:target_20 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.1 a :Indicator ;
     :indicatorCode "21.1" ;
@@ -1039,7 +1078,8 @@ kmgbf:indicator_21.1 a :Indicator ;
     skos:prefLabel "Indicateur sur les informations relatives à la biodiversité pour le suivi du Cadre mondial de la biodiversité de Kunming-Montréal"@fr ;
     skos:prefLabel "Indicador sobre información de diversidad biológica para el seguimiento del Marco Mundial de Biodiversidad de Kunming-Montreal"@es ;
     :isHeadlineFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.1 a :Indicator ;
     :indicatorCode "22.1" ;
@@ -1047,7 +1087,8 @@ kmgbf:indicator_22.1 a :Indicator ;
     skos:prefLabel "Changement d’affectation des terres et régime foncier dans les territoires traditionnels des peuples autochtones et communautés locales"@fr ;
     skos:prefLabel "Cambio en el uso de la tierra y la tenencia de la tierra en los territorios tradicionales de los pueblos indígenas y las comunidades locales"@es ;
     :isHeadlineFor kmgbf:target_22 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.b a :Indicator ;
     :indicatorCode "22.b" ;
@@ -1055,7 +1096,8 @@ kmgbf:indicator_22.b a :Indicator ;
     skos:prefLabel "Nombre de pays agissant en faveur d’une représentation et d’une participation pleines et entières, équitables, inclusives, efficaces et tenant compte du genre des peuples autochtones et communautés locales aux processus décisionnels, ainsi que leur accès à la justice et aux informations relatives à la biodiversité, dans le respect de leurs cultures et de leurs droits sur leurs terres, territoires, ressources et connaissances traditionnelles, tout en veillant à inclure les femmes, les filles, les enfants, les jeunes et les personnes handicapées, et de la pleine protection des défenseurs et défenseuses des droits de l’homme en matière d’environnement"@fr ;
     skos:prefLabel "Número de países que adoptan medidas tendientes a lograr la representación y participación plena, equitativa, inclusiva, efectiva y con perspectiva de género de los pueblos indígenas y las comunidades locales en la toma de decisiones, y su acceso a la justicia y a información relacionada con la diversidad biológica, respetando sus culturas y sus derechos sobre las tierras, los territorios, los recursos y los conocimientos tradicionales, así como de las mujeres y las niñas, la infancia y la juventud y las personas con discapacidad, y para lograr la protección plena de los defensores y las defensoras de los derechos humanos relacionados con el medio ambiente"@es ;
     :isBinaryFor kmgbf:target_22 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_23.b a :Indicator ;
     :indicatorCode "23.b" ;
@@ -1063,7 +1105,8 @@ kmgbf:indicator_23.b a :Indicator ;
     skos:prefLabel "Nombre de pays disposant de cadres juridiques, administratifs ou politiques, entre autres, pour mettre en œuvre le Plan d’action pour l’égalité des sexes (2023-2030), visant à garantir que toutes les femmes et toutes les filles bénéficient des mêmes possibilités et capacités de contribuer à la réalisation des trois objectifs de la Convention, notamment en reconnaissant l’égalité de leurs droits et de leur accès aux terres et aux ressources naturelles"@fr ;
     skos:prefLabel "Número de países que cuentan con marcos jurídicos, administrativos o de políticas, entre otros, para implementar el Plan de Acción sobre Género (2023-2030), a fin de garantizar que todas las mujeres y las niñas tengan igualdad de oportunidades y capacidad para contribuir a la consecución de los tres objetivos del Convenio, incluido garantizando la igualdad de derechos y acceso de las mujeres a la tierra y a los recursos naturales"@es ;
     :isBinaryFor kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.1 a :Indicator ;
     :indicatorCode "A.CT.1" ;
@@ -1071,7 +1114,8 @@ kmgbf:indicator_A.CT.1 a :Indicator ;
     skos:prefLabel "Indice de préservation des écosystèmes"@fr ;
     skos:prefLabel "Índice de Estado Intacto de los Ecosistemas"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.2 a :Indicator ;
     :indicatorCode "A.CT.2" ;
@@ -1079,7 +1123,8 @@ kmgbf:indicator_A.CT.2 a :Indicator ;
     skos:prefLabel "Indice d’intégrité des écosystèmes"@fr ;
     skos:prefLabel "Índice de Integridad de los Ecosistemas"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.3 a :Indicator ;
     :indicatorCode "A.CT.3" ;
@@ -1087,7 +1132,8 @@ kmgbf:indicator_A.CT.3 a :Indicator ;
     skos:prefLabel "Indice de l’habitat des espèces"@fr ;
     skos:prefLabel "Índice de Hábitats de Especies"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.4 a :Indicator ;
     :indicatorCode "A.CT.4" ;
@@ -1095,7 +1141,8 @@ kmgbf:indicator_A.CT.4 a :Indicator ;
     skos:prefLabel "Indice de l’habitat de la biodiversité"@fr ;
     skos:prefLabel "Índice de Hábitats de Diversidad Biológica"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.5 a :Indicator ;
     :indicatorCode "A.CT.5" ;
@@ -1103,7 +1150,8 @@ kmgbf:indicator_A.CT.5 a :Indicator ;
     skos:prefLabel "Indice de préservation de la biodiversité"@fr ;
     skos:prefLabel "Índice de Estado Intacto de la Biodiversidad"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.6 a :Indicator ;
     :indicatorCode "A.CT.6" ;
@@ -1111,7 +1159,8 @@ kmgbf:indicator_A.CT.6 a :Indicator ;
     skos:prefLabel "Indice de protection et de connexion"@fr ;
     skos:prefLabel "Índice de Áreas Protegidas Conectadas"@es ;
     :isComponentFor kmgbf:goal_A, kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.7 a :Indicator ;
     :indicatorCode "A.CT.7" ;
@@ -1119,7 +1168,8 @@ kmgbf:indicator_A.CT.7 a :Indicator ;
     skos:prefLabel "Indice de représentativité et connectivité des aires protégées"@fr ;
     skos:prefLabel "Índices de Representatividad y Conectividad de Áreas Protegidas"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.8 a :Indicator ;
     :indicatorCode "A.CT.8" ;
@@ -1127,7 +1177,8 @@ kmgbf:indicator_A.CT.8 a :Indicator ;
     skos:prefLabel "Nombre d’extinctions évitées"@fr ;
     skos:prefLabel "Número de extinciones evitadas"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.9 a :Indicator ;
     :indicatorCode "A.CT.9" ;
@@ -1135,7 +1186,8 @@ kmgbf:indicator_A.CT.9 a :Indicator ;
     skos:prefLabel "Indice de distinction évolutive et d’extinction mondiale (EDGE)"@fr ;
     skos:prefLabel "Índice de Especies Evolutivamente Distintas y en Peligro de Extinción Mundial"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.10 a :Indicator ;
     :indicatorCode "A.CT.10" ;
@@ -1143,7 +1195,8 @@ kmgbf:indicator_A.CT.10 a :Indicator ;
     skos:prefLabel "Indice Planète vivante"@fr ;
     skos:prefLabel "Índice Planeta Vivo"@es ;
     :isComponentFor kmgbf:goal_A, kmgbf:target_4 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CT.11 a :Indicator ;
     :indicatorCode "A.CT.11" ;
@@ -1151,7 +1204,8 @@ kmgbf:indicator_A.CT.11 a :Indicator ;
     skos:prefLabel "Indice relatif aux oiseaux sauvages"@fr ;
     skos:prefLabel "Índice Mundial de Aves Silvestres"@es ;
     :isComponentFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.1 a :Indicator ;
     :indicatorCode "A.CY.1" ;
@@ -1159,7 +1213,8 @@ kmgbf:indicator_A.CY.1 a :Indicator ;
     skos:prefLabel "Surface forestière, en pourcentage de la superficie totale des terres"@fr ;
     skos:prefLabel "Superficie forestal en proporción a la superficie total"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.2 a :Indicator ;
     :indicatorCode "A.CY.2" ;
@@ -1167,7 +1222,8 @@ kmgbf:indicator_A.CY.2 a :Indicator ;
     skos:prefLabel "Taux de perte du couvert forestier"@fr ;
     skos:prefLabel "Tasa de pérdida de cubierta forestal"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.3 a :Indicator ;
     :indicatorCode "A.CY.3" ;
@@ -1175,7 +1231,8 @@ kmgbf:indicator_A.CY.3 a :Indicator ;
     skos:prefLabel "Indice de couvert forestier des montagnes"@fr ;
     skos:prefLabel "Índice de Cobertura Verde de las Montañas"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.4 a :Indicator ;
     :indicatorCode "A.CY.4" ;
@@ -1183,7 +1240,8 @@ kmgbf:indicator_A.CY.4 a :Indicator ;
     skos:prefLabel "Couverture forestière mondiale continue des mangroves"@fr ;
     skos:prefLabel "Cubierta forestal continua mundial de manglares"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.5 a :Indicator ;
     :indicatorCode "A.CY.5" ;
@@ -1191,7 +1249,8 @@ kmgbf:indicator_A.CY.5 a :Indicator ;
     skos:prefLabel "Fragmentation de la forêt de mangroves"@fr ;
     skos:prefLabel "Fragmentación de los bosques de manglares"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.6 a :Indicator ;
     :indicatorCode "A.CY.6" ;
@@ -1199,7 +1258,8 @@ kmgbf:indicator_A.CY.6 a :Indicator ;
     skos:prefLabel "Étendue des mangroves"@fr ;
     skos:prefLabel "Extensión de los manglares"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.7 a :Indicator ;
     :indicatorCode "A.CY.7" ;
@@ -1207,7 +1267,8 @@ kmgbf:indicator_A.CY.7 a :Indicator ;
     skos:prefLabel "Étendue mondiale des marais salants"@fr ;
     skos:prefLabel "Extensión mundial de las marismas"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.8 a :Indicator ;
     :indicatorCode "A.CY.8" ;
@@ -1215,7 +1276,8 @@ kmgbf:indicator_A.CY.8 a :Indicator ;
     skos:prefLabel "Indice des tendances de l’étendue des zones humides"@fr ;
     skos:prefLabel "Índice de Tendencias en la Extensión de los Humedales"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.9 a :Indicator ;
     :indicatorCode "A.CY.9" ;
@@ -1223,7 +1285,8 @@ kmgbf:indicator_A.CY.9 a :Indicator ;
     skos:prefLabel "Indice de fragmentation des forêts"@fr ;
     skos:prefLabel "Índice de Fragmentación de los Bosques"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.10 a :Indicator ;
     :indicatorCode "A.CY.10" ;
@@ -1231,7 +1294,8 @@ kmgbf:indicator_A.CY.10 a :Indicator ;
     skos:prefLabel "Indice d’intégrité des paysages forestiers"@fr ;
     skos:prefLabel "Índice de Integridad de los Paisajes Forestales"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.11 a :Indicator ;
     :indicatorCode "A.CY.11" ;
@@ -1239,7 +1303,8 @@ kmgbf:indicator_A.CY.11 a :Indicator ;
     skos:prefLabel "Produits relatifs à la santé de la végétation mondiale"@fr ;
     skos:prefLabel "Productos de salud vegetal mundial"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.12 a :Indicator ;
     :indicatorCode "A.CY.12" ;
@@ -1247,7 +1312,8 @@ kmgbf:indicator_A.CY.12 a :Indicator ;
     skos:prefLabel "Ampleur relative de la fragmentation"@fr ;
     skos:prefLabel "Magnitud relativa de fragmentación"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.13 a :Indicator ;
     :indicatorCode "A.CY.13" ;
@@ -1255,7 +1321,8 @@ kmgbf:indicator_A.CY.13 a :Indicator ;
     skos:prefLabel "Indice de santé des océans"@fr ;
     skos:prefLabel "Índice de Salud de los Océanos"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.14 a :Indicator ;
     :indicatorCode "A.CY.14" ;
@@ -1263,7 +1330,8 @@ kmgbf:indicator_A.CY.14 a :Indicator ;
     skos:prefLabel "Ampleur des dommages physiques causés aux habitats prédominants des fonds marins"@fr ;
     skos:prefLabel "Extensión de los daños físicos a los hábitats predominantes del fondo marino"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.15 a :Indicator ;
     :indicatorCode "A.CY.15" ;
@@ -1271,7 +1339,8 @@ kmgbf:indicator_A.CY.15 a :Indicator ;
     skos:prefLabel "Indice de fragmentation des rivières"@fr ;
     skos:prefLabel "Índice de Fragmentación de los Ríos"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.16 a :Indicator ;
     :indicatorCode "A.CY.16" ;
@@ -1279,7 +1348,8 @@ kmgbf:indicator_A.CY.16 a :Indicator ;
     skos:prefLabel "Abondance moyenne des espèces"@fr ;
     skos:prefLabel "Abundancia media de especies"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.17 a :Indicator ;
     :indicatorCode "A.CY.17" ;
@@ -1287,7 +1357,8 @@ kmgbf:indicator_A.CY.17 a :Indicator ;
     skos:prefLabel "Évolution de la biomasse et de l’abondance du plancton"@fr ;
     skos:prefLabel "Cambios en la biomasa y abundancia de plancton"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.18 a :Indicator ;
     :indicatorCode "A.CY.18" ;
@@ -1295,7 +1366,8 @@ kmgbf:indicator_A.CY.18 a :Indicator ;
     skos:prefLabel "Exhaustivité de la conservation des espèces ayant une valeur socio-économique et culturelle"@fr ;
     skos:prefLabel "Alcance de la conservación de especies de valor socioeconómico y cultural"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.19 a :Indicator ;
     :indicatorCode "A.CY.19" ;
@@ -1303,7 +1375,8 @@ kmgbf:indicator_A.CY.19 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (parents sauvages d’animaux domestiques)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (especies silvestres emparentadas con animales domesticados)"@es ;
     :isComplementaryFor kmgbf:goal_A, kmgbf:target_4, kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.20 a :Indicator ;
     :indicatorCode "A.CY.20" ;
@@ -1311,7 +1384,8 @@ kmgbf:indicator_A.CY.20 a :Indicator ;
     skos:prefLabel "Indice d’information sur l’état des espèces"@fr ;
     skos:prefLabel "Índice de Información sobre el Estado de las Especies"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.21 a :Indicator ;
     :indicatorCode "A.CY.21" ;
@@ -1319,7 +1393,8 @@ kmgbf:indicator_A.CY.21 a :Indicator ;
     skos:prefLabel "Perte attendue de la diversité phylogénétique"@fr ;
     skos:prefLabel "Pérdida prevista de diversidad filogenética"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.CY.22 a :Indicator ;
     :indicatorCode "A.CY.22" ;
@@ -1327,7 +1402,8 @@ kmgbf:indicator_A.CY.22 a :Indicator ;
     skos:prefLabel "Pourcentage de populations préservées au sein des espèces"@fr ;
     skos:prefLabel "Proporción de poblaciones que se mantiene dentro de cada especie"@es ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.CT.1 a :Indicator ;
     :indicatorCode "B.CT.1" ;
@@ -1335,7 +1411,8 @@ kmgbf:indicator_B.CT.1 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge pour les espèces utilisées"@fr ;
     skos:prefLabel "Índice de la Lista Roja para especies utilizadas"@es ;
     :isComponentFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.CT.2 a :Indicator ;
     :indicatorCode "B.CT.2" ;
@@ -1343,7 +1420,8 @@ kmgbf:indicator_B.CT.2 a :Indicator ;
     skos:prefLabel "Indice Planète Vivante pour les espèces utilisées"@fr ;
     skos:prefLabel "Índice Planeta Vivo para especies utilizadas"@es ;
     :isComponentFor kmgbf:goal_B, kmgbf:target_5, kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.CT.3 a :Indicator ;
     :indicatorCode "B.CT.3" ;
@@ -1351,7 +1429,8 @@ kmgbf:indicator_B.CT.3 a :Indicator ;
     skos:prefLabel "Valeur totale des services écosystémiques en unités monétaires"@fr ;
     skos:prefLabel "Valor total de los servicios de los ecosistemas en unidades monetarias"@es ;
     :isComponentFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.CY.1 a :Indicator ;
     :indicatorCode "B.CY.1" ;
@@ -1359,7 +1438,8 @@ kmgbf:indicator_B.CY.1 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (espèces pollinisatrices)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (especies polinizadoras)"@es ;
     :isComplementaryFor kmgbf:goal_B, kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.CY.2 a :Indicator ;
     :indicatorCode "B.CY.2" ;
@@ -1367,7 +1447,8 @@ kmgbf:indicator_B.CY.2 a :Indicator ;
     skos:prefLabel "Production et commerce des produits forestiers (bois de chauffage)"@fr ;
     skos:prefLabel "Producción y comercio forestal (leña)"@es ;
     :isComplementaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_B.CY.3 a :Indicator ;
     :indicatorCode "B.CY.3" ;
@@ -1375,7 +1456,8 @@ kmgbf:indicator_B.CY.3 a :Indicator ;
     skos:prefLabel "Organisation des Nations Unies pour l’éducation, la science et la culture - indicateurs culture 2030"@fr ;
     skos:prefLabel "Indicadores Cultura | 2030 de la Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura"@es ;
     :isComplementaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_C.CY.1 a :Indicator ;
     :indicatorCode "C.CY.1" ;
@@ -1383,7 +1465,8 @@ kmgbf:indicator_C.CY.1 a :Indicator ;
     skos:prefLabel "Nombre d’utilisateurs ayant communiqué des informations relatives à l’utilisation des ressources génétiques à des points de contrôle désignés"@fr ;
     skos:prefLabel "Número de usuarios que han proporcionado a puntos de verificación designados información pertinente para la utilización de recursos genéticos"@es ;
     :isComplementaryFor kmgbf:goal_C, kmgbf:target_13 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_C.CY.2 a :Indicator ;
     :indicatorCode "C.CY.2" ;
@@ -1391,7 +1474,8 @@ kmgbf:indicator_C.CY.2 a :Indicator ;
     skos:prefLabel "Nombre de communiqués aux points de contrôle publiés dans le Centre d’échange sur l’accès et le partage des avantages"@fr ;
     skos:prefLabel "Número de comunicados de puntos de verificación publicados en el Centro de Intercambio de Información sobre Acceso y Participación en los Beneficios"@es ;
     :isComplementaryFor kmgbf:goal_C, kmgbf:target_13 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_C.CY.3 a :Indicator ;
     :indicatorCode "C.CY.3" ;
@@ -1399,7 +1483,8 @@ kmgbf:indicator_C.CY.3 a :Indicator ;
     skos:prefLabel "Nombre total de certificats de conformité internationalement reconnus à des fins non commerciales publiés dans le Centre d’échange sur l’accès et le partage des avantages"@fr ;
     skos:prefLabel "Número total de certificados de cumplimiento reconocidos internacionalmente para fines no comerciales publicados en el Centro de Intercambio de Información sobre Acceso y Participación en los Beneficios"@es ;
     :isComplementaryFor kmgbf:goal_C, kmgbf:target_13 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.1 a :Indicator ;
     :indicatorCode "D.CY.1" ;
@@ -1407,7 +1492,8 @@ kmgbf:indicator_D.CY.1 a :Indicator ;
     skos:prefLabel "Nombre de chercheurs par population"@fr ;
     skos:prefLabel "Número de investigadores por población"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.2 a :Indicator ;
     :indicatorCode "D.CY.2" ;
@@ -1415,7 +1501,8 @@ kmgbf:indicator_D.CY.2 a :Indicator ;
     skos:prefLabel "Nombre d’articles scientifiques conjoints publiés (dans le système d’information sur la biodiversité des océans) par secteur"@fr ;
     skos:prefLabel "Número de artículos científicos conjuntos publicados en el Sistema de Información sobre la Biodiversidad del Océano, por sector"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19, kmgbf:target_20 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.3 a :Indicator ;
     :indicatorCode "D.CY.3" ;
@@ -1423,7 +1510,8 @@ kmgbf:indicator_D.CY.3 a :Indicator ;
     skos:prefLabel "Part du budget total de recherche allouée à la recherche dans le domaine des technologies marines"@fr ;
     skos:prefLabel "Proporción del presupuesto total de investigación asignada a la investigación en el campo de la tecnología marina"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19, kmgbf:target_20 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.4 a :Indicator ;
     :indicatorCode "D.CY.4" ;
@@ -1431,7 +1519,8 @@ kmgbf:indicator_D.CY.4 a :Indicator ;
     skos:prefLabel "Volume des flux d’aide publique au développement destiné aux bourses d’études par secteur et type d’études"@fr ;
     skos:prefLabel "Volumen de corrientes de asistencia oficial para el desarrollo destinado a becas, desglosado por sector y tipo de estudio"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19, kmgbf:target_20 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.5 a :Indicator ;
     :indicatorCode "D.CY.5" ;
@@ -1439,7 +1528,8 @@ kmgbf:indicator_D.CY.5 a :Indicator ;
     skos:prefLabel "Importations mondiales de biens du secteur des technologies de l’information et de la communication, par catégorie"@fr ;
     skos:prefLabel "Importaciones mundiales de productos de tecnología de la información y las comunicaciones desglosadas por categoría"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.6 a :Indicator ;
     :indicatorCode "D.CY.6" ;
@@ -1447,7 +1537,8 @@ kmgbf:indicator_D.CY.6 a :Indicator ;
     skos:prefLabel "Financement international ciblant les peuples autochtones et communautés locales dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación internacional destinada a los pueblos indígenas y las comunidades locales en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.7 a :Indicator ;
     :indicatorCode "D.CY.7" ;
@@ -1455,7 +1546,8 @@ kmgbf:indicator_D.CY.7 a :Indicator ;
     skos:prefLabel "Financement international ciblant les jeunes dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación internacional destinada a la juventud en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.8 a :Indicator ;
     :indicatorCode "D.CY.8" ;
@@ -1463,7 +1555,8 @@ kmgbf:indicator_D.CY.8 a :Indicator ;
     skos:prefLabel "Financement national ciblant les jeunes dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación internacional destinada a objetivos de políticas de igualdad de género y derechos de la mujer en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.9 a :Indicator ;
     :indicatorCode "D.CY.9" ;
@@ -1471,7 +1564,8 @@ kmgbf:indicator_D.CY.9 a :Indicator ;
     skos:prefLabel "Valeur monétaire du budget annuel pour la biodiversité par rapport au budget national total"@fr ;
     skos:prefLabel "Valor monetario del presupuesto anual para diversidad biológica del presupuesto nacional total"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.10 a :Indicator ;
     :indicatorCode "D.CY.10" ;
@@ -1479,7 +1573,8 @@ kmgbf:indicator_D.CY.10 a :Indicator ;
     skos:prefLabel "Pourcentage des dépenses annuelles consacrées à la biodiversité dans les budgets totaux des administrations publiques nationales"@fr ;
     skos:prefLabel "Porcentaje del gasto anual en diversidad biológica de los presupuestos totales del gobierno nacional"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.11 a :Indicator ;
     :indicatorCode "D.CY.11" ;
@@ -1487,7 +1582,8 @@ kmgbf:indicator_D.CY.11 a :Indicator ;
     skos:prefLabel "Financement national ciblant les peuples autochtones et communautés locales dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación nacional destinada a los pueblos indígenas y las comunidades locales en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.12 a :Indicator ;
     :indicatorCode "D.CY.12" ;
@@ -1495,7 +1591,8 @@ kmgbf:indicator_D.CY.12 a :Indicator ;
     skos:prefLabel "Financement national ciblant les jeunes dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación nacional destinada a la juventud en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.13 a :Indicator ;
     :indicatorCode "D.CY.13" ;
@@ -1503,7 +1600,8 @@ kmgbf:indicator_D.CY.13 a :Indicator ;
     skos:prefLabel "Financement national ciblant les objectifs des politiques sur l’égalité des sexes et les droits des femmes dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación nacional destinada a objetivos de políticas de igualdad de género y derechos de la mujer en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.14 a :Indicator ;
     :indicatorCode "D.CY.14" ;
@@ -1511,7 +1609,8 @@ kmgbf:indicator_D.CY.14 a :Indicator ;
     skos:prefLabel "Financement privé ciblant les peuples autochtones et communautés locales dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación privada destinada a los pueblos indígenas y las comunidades locales en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.15 a :Indicator ;
     :indicatorCode "D.CY.15" ;
@@ -1519,7 +1618,8 @@ kmgbf:indicator_D.CY.15 a :Indicator ;
     skos:prefLabel "Financement privé ciblant les jeunes dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación privada destinada a la juventud en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.16 a :Indicator ;
     :indicatorCode "D.CY.16" ;
@@ -1527,7 +1627,8 @@ kmgbf:indicator_D.CY.16 a :Indicator ;
     skos:prefLabel "Financement privé ciblant les objectifs des politiques sur l’égalité des sexes et les droits des femmes dans le cadre des activités liées à la biodiversité"@fr ;
     skos:prefLabel "Financiación privada destinada a objetivos de políticas de igualdad de género y derechos de la mujer en actividades relacionadas con la diversidad biológica"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_D.CY.17 a :Indicator ;
     :indicatorCode "D.CY.17" ;
@@ -1535,7 +1636,8 @@ kmgbf:indicator_D.CY.17 a :Indicator ;
     skos:prefLabel "Mobilisation de fonds privés en faveur des peuples autochtones et communautés locales, des femmes et des jeunes"@fr ;
     skos:prefLabel "Financiación privada movilizada para los pueblos indígenas y las comunidades locales, las mujeres y la juventud"@es ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_1.CY.1 a :Indicator ;
     :indicatorCode "1.CY.1" ;
@@ -1543,7 +1645,8 @@ kmgbf:indicator_1.CY.1 a :Indicator ;
     skos:prefLabel "Pourcentage de bassins hydriques transfrontaliers faisant l’objet d’un dispositif de coopération opérationnel"@fr ;
     skos:prefLabel "Proporción de la superficie de cuencas transfronterizas sujetas a arreglos operacionales para la cooperación en materia de aguas"@es ;
     :isComplementaryFor kmgbf:target_1 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_2.CT.1 a :Indicator ;
     :indicatorCode "2.CT.1" ;
@@ -1552,7 +1655,8 @@ kmgbf:indicator_2.CT.1 a :Indicator ;
     skos:prefLabel "Proporción de tierras degradadas en comparación con la superficie terrestre total"@es ;
     :isComponentFor kmgbf:target_2 ;
     :isComplementaryFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_2.CY.1 a :Indicator ;
     :indicatorCode "2.CY.1" ;
@@ -1560,7 +1664,8 @@ kmgbf:indicator_2.CY.1 a :Indicator ;
     skos:prefLabel "Indice mondial de restauration des écosystèmes"@fr ;
     skos:prefLabel "Índice Mundial de Restauración de los Ecosistemas"@es ;
     :isComplementaryFor kmgbf:target_2 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_2.CY.2 a :Indicator ;
     :indicatorCode "2.CY.2" ;
@@ -1568,7 +1673,8 @@ kmgbf:indicator_2.CY.2 a :Indicator ;
     skos:prefLabel "Pourcentage des principales zones de biodiversité dans des conditions favorables"@fr ;
     skos:prefLabel "Proporción de áreas clave para la diversidad biológica en condiciones favorables"@es ;
     :isComplementaryFor kmgbf:target_2, kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.CT.1 a :Indicator ;
     :indicatorCode "3.CT.1" ;
@@ -1576,7 +1682,8 @@ kmgbf:indicator_3.CT.1 a :Indicator ;
     skos:prefLabel "Indice de connectivité des aires protégées"@fr ;
     skos:prefLabel "Índice de la Conectividad de las Áreas Protegidas"@es ;
     :isComponentFor kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.CT.2 a :Indicator ;
     :indicatorCode "3.CT.2" ;
@@ -1585,7 +1692,8 @@ kmgbf:indicator_3.CT.2 a :Indicator ;
     skos:prefLabel "Índice de Protección de Especies"@es ;
     :isComponentFor kmgbf:target_3 ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.CY.1 a :Indicator ;
     :indicatorCode "3.CY.1" ;
@@ -1593,7 +1701,8 @@ kmgbf:indicator_3.CY.1 a :Indicator ;
     skos:prefLabel "Taux d’événements de déclassement, de réduction et perte de protection juridique des aires protégées"@fr ;
     skos:prefLabel "Tasa de instancias de rebaja de categoría, reducción y desclasificación de áreas protegidas"@es ;
     :isComplementaryFor kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.CY.2 a :Indicator ;
     :indicatorCode "3.CY.2" ;
@@ -1601,7 +1710,8 @@ kmgbf:indicator_3.CY.2 a :Indicator ;
     skos:prefLabel "Union internationale pour la conservation de la nature – Norme de la Liste verte des aires protégées et conservées"@fr ;
     skos:prefLabel "Estándar de la Lista Verde de Áreas Protegidas y Conservadas de la Unión Internacional para la Conservación de la Naturaleza"@es ;
     :isComplementaryFor kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.CY.3 a :Indicator ;
     :indicatorCode "3.CY.3" ;
@@ -1609,7 +1719,8 @@ kmgbf:indicator_3.CY.3 a :Indicator ;
     skos:prefLabel "Indice d’isolement des aires protégées"@fr ;
     skos:prefLabel "Índice de Aislamiento de Áreas Protegidas"@es ;
     :isComplementaryFor kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.CY.4 a :Indicator ;
     :indicatorCode "3.CY.4" ;
@@ -1617,7 +1728,8 @@ kmgbf:indicator_3.CY.4 a :Indicator ;
     skos:prefLabel "Métrique du réseau d’aires protégées"@fr ;
     skos:prefLabel "Parámetro de Conectividad de Redes de Áreas Protegidas"@es ;
     :isComplementaryFor kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_3.CY.5 a :Indicator ;
     :indicatorCode "3.CY.5" ;
@@ -1625,7 +1737,8 @@ kmgbf:indicator_3.CY.5 a :Indicator ;
     skos:prefLabel "Nombre d’aires protégées ayant fait l’objet d’une évaluation de la gouvernance et de l’équipe au niveau du site"@fr ;
     skos:prefLabel "Número de áreas protegidas que han completado una evaluación de gobernanza y equidad a nivel de sitio"@es ;
     :isComplementaryFor kmgbf:target_3 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_4.CT.1 a :Indicator ;
     :indicatorCode "4.CT.1" ;
@@ -1634,7 +1747,8 @@ kmgbf:indicator_4.CT.1 a :Indicator ;
     skos:prefLabel "Número de recursos genéticos a) vegetales y b) animales para la alimentación y la agricultura preservados en instalaciones de conservación a mediano o largo plazo"@es ;
     :isComponentFor kmgbf:target_4 ;
     :isComplementaryFor kmgbf:goal_A, kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_4.CT.2 a :Indicator ;
     :indicatorCode "4.CT.2" ;
@@ -1643,7 +1757,8 @@ kmgbf:indicator_4.CT.2 a :Indicator ;
     skos:prefLabel "Estado Verde de las Especies"@es ;
     :isComponentFor kmgbf:target_4 ;
     :isComplementaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_4.CT.3 a :Indicator ;
     :indicatorCode "4.CT.3" ;
@@ -1651,7 +1766,8 @@ kmgbf:indicator_4.CT.3 a :Indicator ;
     skos:prefLabel "Indicateur de conflits entre les hommes et la faune"@fr ;
     skos:prefLabel "Indicador de conflictos entre seres humanos y fauna y flora silvestres"@es ;
     :isComponentFor kmgbf:target_4 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_4.CT.4 a :Indicator ;
     :indicatorCode "4.CT.4" ;
@@ -1660,7 +1776,8 @@ kmgbf:indicator_4.CT.4 a :Indicator ;
     skos:prefLabel "Proporción de razas locales consideradas en riesgo de extinción"@es ;
     :isComponentFor kmgbf:target_4 ;
     :isComplementaryFor kmgbf:goal_A, kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_4.CY.1 a :Indicator ;
     :indicatorCode "4.CY.1" ;
@@ -1668,7 +1785,8 @@ kmgbf:indicator_4.CY.1 a :Indicator ;
     skos:prefLabel "Mesure de la réduction des menaces pesant sur les espèces et de leur rétablissement"@fr ;
     skos:prefLabel "Parámetro de Reducción de las Amenazas a las Especies y Restauración de las Especies"@es ;
     :isComplementaryFor kmgbf:target_4 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_4.CY.2 a :Indicator ;
     :indicatorCode "4.CY.2" ;
@@ -1676,7 +1794,8 @@ kmgbf:indicator_4.CY.2 a :Indicator ;
     skos:prefLabel "Nombre d’éradications d’espèces exotiques envahissantes insulaires"@fr ;
     skos:prefLabel "Número de erradicaciones de especies exóticas invasoras en las islas"@es ;
     :isComplementaryFor kmgbf:target_4 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CT.1 a :Indicator ;
     :indicatorCode "5.CT.1" ;
@@ -1684,7 +1803,8 @@ kmgbf:indicator_5.CT.1 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (incidences de l’utilisation) pour les espèces utilisées"@fr ;
     skos:prefLabel "Índice de la Lista Roja (impactos de la utilización) para especies utilizadas"@es ;
     :isComponentFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CT.2 a :Indicator ;
     :indicatorCode "5.CT.2" ;
@@ -1693,7 +1813,8 @@ kmgbf:indicator_5.CT.2 a :Indicator ;
     skos:prefLabel "Grado de aplicación de instrumentos internacionales cuyo objetivo es combatir la pesca ilegal, no declarada y no reglamentada"@es ;
     :isComponentFor kmgbf:target_5 ;
     :isComplementaryFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.1 a :Indicator ;
     :indicatorCode "5.CY.1" ;
@@ -1701,7 +1822,8 @@ kmgbf:indicator_5.CY.1 a :Indicator ;
     skos:prefLabel "Indicateur de menace pour la pêche dans les eaux intérieures"@fr ;
     skos:prefLabel "Indicador de amenazas a la pesca en aguas continentales"@es ;
     :isComplementaryFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.2 a :Indicator ;
     :indicatorCode "5.CY.2" ;
@@ -1709,7 +1831,8 @@ kmgbf:indicator_5.CY.2 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (pour les espèces faisant l’objet d’échanges commerciaux internationaux)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (para las especies comercializadas internacionalmente)"@es ;
     :isComplementaryFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.3 a :Indicator ;
     :indicatorCode "5.CY.3" ;
@@ -1717,7 +1840,8 @@ kmgbf:indicator_5.CY.3 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (incidences de la pêche)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (impactos de la pesca)"@es ;
     :isComplementaryFor kmgbf:target_5, kmgbf:target_9, kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.4 a :Indicator ;
     :indicatorCode "5.CY.4" ;
@@ -1725,7 +1849,8 @@ kmgbf:indicator_5.CY.4 a :Indicator ;
     skos:prefLabel "Pêche certifiée par le Marine Stewardship Council"@fr ;
     skos:prefLabel "Capturas de peces certificadas por el Marine Stewardship Council"@es ;
     :isComplementaryFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.5 a :Indicator ;
     :indicatorCode "5.CY.5" ;
@@ -1733,7 +1858,8 @@ kmgbf:indicator_5.CY.5 a :Indicator ;
     skos:prefLabel "Captures totales de cétacés en vertu de la Convention internationale sur la réglementation de la chasse à la baleine"@fr ;
     skos:prefLabel "Captura total de cetáceos conforme al Convenio Internacional para la Regulación de la Pesca de la Ballena"@es ;
     :isComplementaryFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.6 a :Indicator ;
     :indicatorCode "5.CY.6" ;
@@ -1741,7 +1867,8 @@ kmgbf:indicator_5.CY.6 a :Indicator ;
     skos:prefLabel "Prises accessoires d’espèces vulnérables et non visées"@fr ;
     skos:prefLabel "Capturas incidentales de especies vulnerables y no objetivo"@es ;
     :isComplementaryFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.7 a :Indicator ;
     :indicatorCode "5.CY.7" ;
@@ -1749,7 +1876,8 @@ kmgbf:indicator_5.CY.7 a :Indicator ;
     skos:prefLabel "Nombre de titulaires d’une certification de « chaîne de garde » du Marine Stewardship Council par pays de distribution"@fr ;
     skos:prefLabel "Número de titulares de certificación de cadena de custodia del Marine Stewardship Council, desglosado por país de distribución"@es ;
     :isComplementaryFor kmgbf:target_5, kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_5.CY.8 a :Indicator ;
     :indicatorCode "5.CY.8" ;
@@ -1757,7 +1885,8 @@ kmgbf:indicator_5.CY.8 a :Indicator ;
     skos:prefLabel "Commerce fondé sur la biodiversité, taux de croissance"@fr ;
     skos:prefLabel "Comercio basado en la biodiversidad, tasas de crecimiento"@es ;
     :isComplementaryFor kmgbf:target_5 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_6.CY.1 a :Indicator ;
     :indicatorCode "6.CY.1" ;
@@ -1765,7 +1894,8 @@ kmgbf:indicator_6.CY.1 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (incidences des espèces exotiques envahissantes)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (impactos de las especies exóticas invasoras)"@es ;
     :isComplementaryFor kmgbf:target_6 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CT.1 a :Indicator ;
     :indicatorCode "7.CT.1" ;
@@ -1773,7 +1903,8 @@ kmgbf:indicator_7.CT.1 a :Indicator ;
     skos:prefLabel "Budget des éléments nutritifs des terres cultivées"@fr ;
     skos:prefLabel "Presupuesto para nutrientes de tierras de cultivo"@es ;
     :isComponentFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CT.2 a :Indicator ;
     :indicatorCode "7.CT.2" ;
@@ -1781,7 +1912,8 @@ kmgbf:indicator_7.CT.2 a :Indicator ;
     skos:prefLabel "Pourcentage des eaux usées domestiques et industrielles traitées en toute sécurité"@fr ;
     skos:prefLabel "Proporción de los flujos de aguas residuales domésticas e industriales tratadas de manera adecuada"@es ;
     :isComponentFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CT.3 a :Indicator ;
     :indicatorCode "7.CT.3" ;
@@ -1789,7 +1921,8 @@ kmgbf:indicator_7.CT.3 a :Indicator ;
     skos:prefLabel "Densité des débris plastiques"@fr ;
     skos:prefLabel "Densidad de detritos plásticos"@es ;
     :isComponentFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CT.4 a :Indicator ;
     :indicatorCode "7.CT.4" ;
@@ -1797,7 +1930,8 @@ kmgbf:indicator_7.CT.4 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (impact de la pollution)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (impacto de la contaminación)"@es ;
     :isComponentFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CY.1 a :Indicator ;
     :indicatorCode "7.CY.1" ;
@@ -1805,7 +1939,8 @@ kmgbf:indicator_7.CY.1 a :Indicator ;
     skos:prefLabel "Évolution de la perte d’azote réactif dans l’environnement."@fr ;
     skos:prefLabel "Tendencias en la pérdida de nitrógeno reactivo en el medio ambiente"@es ;
     :isComplementaryFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CY.2 a :Indicator ;
     :indicatorCode "7.CY.2" ;
@@ -1813,7 +1948,8 @@ kmgbf:indicator_7.CY.2 a :Indicator ;
     skos:prefLabel "Tendances des dépôts d’azote"@fr ;
     skos:prefLabel "Tendencias en la deposición de nitrógeno"@es ;
     :isComplementaryFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CY.3 a :Indicator ;
     :indicatorCode "7.CY.3" ;
@@ -1821,7 +1957,8 @@ kmgbf:indicator_7.CY.3 a :Indicator ;
     skos:prefLabel "Pourcentage de déchets municipaux solides collectés et gérés dans des installations contrôlées par rapport au total des déchets produits, par ville"@fr ;
     skos:prefLabel "Proporción de residuos sólidos municipales recogidos y administrados en instalaciones controladas con respecto al total de residuos municipales generados, desglosada por ciudades"@es ;
     :isComplementaryFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CY.4 a :Indicator ;
     :indicatorCode "7.CY.4" ;
@@ -1829,7 +1966,8 @@ kmgbf:indicator_7.CY.4 a :Indicator ;
     skos:prefLabel "Production de déchets dangereux par habitant"@fr ;
     skos:prefLabel "Desechos peligrosos generados per cápita"@es ;
     :isComplementaryFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CY.5 a :Indicator ;
     :indicatorCode "7.CY.5" ;
@@ -1837,7 +1975,8 @@ kmgbf:indicator_7.CY.5 a :Indicator ;
     skos:prefLabel "Évolution de la quantité de déchets, y compris de microplastiques, dans la colonne d’eau et les fonds marins"@fr ;
     skos:prefLabel "Tendencias en la cantidad de basura, incluidos microplásticos, en la columna de agua y en el fondo marino"@es ;
     :isComplementaryFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_7.CY.6 a :Indicator ;
     :indicatorCode "7.CY.6" ;
@@ -1845,7 +1984,8 @@ kmgbf:indicator_7.CY.6 a :Indicator ;
     skos:prefLabel "Utilisation de pesticides par surface cultivée"@fr ;
     skos:prefLabel "Uso de plaguicidas por superficie de tierras de cultivo"@es ;
     :isComplementaryFor kmgbf:target_7 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_8.CT.1 a :Indicator ;
     :indicatorCode "8.CT.1" ;
@@ -1853,7 +1993,8 @@ kmgbf:indicator_8.CT.1 a :Indicator ;
     skos:prefLabel "Nombre de pays qui adoptent et mettent en œuvre des stratégies nationales de réduction des risques de catastrophe naturelle conformes au Cadre de Sendai pour la réduction des risques de catastrophe naturelle 2015-2030"@fr ;
     skos:prefLabel "Número de países que adoptan y aplican estrategias nacionales de reducción del riesgo de desastres en consonancia con el Marco de Sendai para la Reducción del Riesgo de Desastres 2015-2030"@es ;
     :isComponentFor kmgbf:target_8 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_8.CT.2 a :Indicator ;
     :indicatorCode "8.CT.2" ;
@@ -1862,7 +2003,8 @@ kmgbf:indicator_8.CT.2 a :Indicator ;
     skos:prefLabel "Índice de Resiliencia Bioclimática de los Ecosistemas"@es ;
     :isComponentFor kmgbf:target_8 ;
     :isComplementaryFor kmgbf:goal_A ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_8.CY.1 a :Indicator ;
     :indicatorCode "8.CY.1" ;
@@ -1870,7 +2012,8 @@ kmgbf:indicator_8.CY.1 a :Indicator ;
     skos:prefLabel "Stock de biomasse aérienne dans les forêts (tonnes/ha)"@fr ;
     skos:prefLabel "Existencias de biomasa superficial en los bosques (toneladas/hectárea)"@es ;
     :isComplementaryFor kmgbf:target_8 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_8.CY.2 a :Indicator ;
     :indicatorCode "8.CY.2" ;
@@ -1878,7 +2021,8 @@ kmgbf:indicator_8.CY.2 a :Indicator ;
     skos:prefLabel "Inventaires nationaux des gaz à effet de serre provenant de l’utilisation des terres, du changement d’affectation des terres et de l’exploitation forestière"@fr ;
     skos:prefLabel "Inventarios nacionales de gases de efecto invernadero procedentes del uso de la tierra, el cambio en el uso de la tierra y la silvicultura"@es ;
     :isComplementaryFor kmgbf:target_8 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_8.CY.3 a :Indicator ;
     :indicatorCode "8.CY.3" ;
@@ -1886,7 +2030,8 @@ kmgbf:indicator_8.CY.3 a :Indicator ;
     skos:prefLabel "Pourcentage d’administrations locales qui adoptent et mettent en œuvre des stratégies locales de réduction des risques de catastrophe naturelle conformes aux stratégies nationales de réduction des risques de catastrophes"@fr ;
     skos:prefLabel "Proporción de gobiernos locales que adoptan y aplican estrategias locales de reducción del riesgo de desastres en consonancia con las estrategias nacionales de reducción del riesgo de desastres"@es ;
     :isComplementaryFor kmgbf:target_8 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_8.CY.4 a :Indicator ;
     :indicatorCode "8.CY.4" ;
@@ -1894,7 +2039,8 @@ kmgbf:indicator_8.CY.4 a :Indicator ;
     skos:prefLabel "Acidité marine moyenne (pH) mesurée dans une série convenue de stations d’échantillonnage représentatives"@fr ;
     skos:prefLabel "Acidez media del mar (pH) medida en un conjunto convenido de estaciones de muestreo representativas"@es ;
     :isComplementaryFor kmgbf:target_8 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_9.CT.1 a :Indicator ;
     :indicatorCode "9.CT.1" ;
@@ -1902,7 +2048,8 @@ kmgbf:indicator_9.CT.1 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (espèces utilisées pour l’alimentation et la médecine)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (especies utilizadas para alimentos y medicamentos)"@es ;
     :isComponentFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_9.CY.1 a :Indicator ;
     :indicatorCode "9.CY.1" ;
@@ -1910,7 +2057,8 @@ kmgbf:indicator_9.CY.1 a :Indicator ;
     skos:prefLabel "Biomasse du stock reproducteur (liée aux espèces exploitées commercialement)"@fr ;
     skos:prefLabel "Biomasa de población reproductora (relacionada con especies explotadas comercialmente)"@es ;
     :isComplementaryFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_9.CY.2 a :Indicator ;
     :indicatorCode "9.CY.2" ;
@@ -1918,7 +2066,8 @@ kmgbf:indicator_9.CY.2 a :Indicator ;
     skos:prefLabel "Volume de production par unité de main-d’œuvre par classe de taille d’entreprise (indicateur de l’objectif de développement"@fr ;
     skos:prefLabel "Volumen de producción por unidad de trabajo desglosado por tamaño y tipo de explotación (agropecuaria / ganadera / forestal"@es ;
     :isComplementaryFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_9.CY.3 a :Indicator ;
     :indicatorCode "9.CY.3" ;
@@ -1926,7 +2075,8 @@ kmgbf:indicator_9.CY.3 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (impact de l’utilisation)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (impactos de la utilización)"@es ;
     :isComplementaryFor kmgbf:target_9 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_10.CT.1 a :Indicator ;
     :indicatorCode "10.CT.1" ;
@@ -1934,7 +2084,8 @@ kmgbf:indicator_10.CT.1 a :Indicator ;
     skos:prefLabel "Revenu moyen des petits producteurs de denrées alimentaires, par sexe et statut autochtone"@fr ;
     skos:prefLabel "Media de ingresos de los productores de alimentos en pequeña escala, desglosada por sexo y condición indígena"@es ;
     :isComponentFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_10.CY.1 a :Indicator ;
     :indicatorCode "10.CY.1" ;
@@ -1942,7 +2093,8 @@ kmgbf:indicator_10.CY.1 a :Indicator ;
     skos:prefLabel "Indice Agrobiodiversité"@fr ;
     skos:prefLabel "Índice de Agrobiodiversidad"@es ;
     :isComplementaryFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_10.CY.2 a :Indicator ;
     :indicatorCode "10.CY.2" ;
@@ -1950,7 +2102,8 @@ kmgbf:indicator_10.CY.2 a :Indicator ;
     skos:prefLabel "Stocks de carbone organique du sol"@fr ;
     skos:prefLabel "Reservas de carbono orgánico del suelo"@es ;
     :isComplementaryFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_10.CY.3 a :Indicator ;
     :indicatorCode "10.CY.3" ;
@@ -1958,7 +2111,8 @@ kmgbf:indicator_10.CY.3 a :Indicator ;
     skos:prefLabel "Indice de la Liste rouge (espèces forestières spécialisées)"@fr ;
     skos:prefLabel "Índice de la Lista Roja (especies forestales especialistas)"@es ;
     :isComplementaryFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_10.CY.4 a :Indicator ;
     :indicatorCode "10.CY.4" ;
@@ -1966,7 +2120,8 @@ kmgbf:indicator_10.CY.4 a :Indicator ;
     skos:prefLabel "Superficie forestière bénéficiant d’une gestion durable : certification de la gestion forestière totale par le Forest Stewardship Council et le Programme d’approbation de la certification forestière"@fr ;
     skos:prefLabel "Superficie forestal sujeta a gestión sostenible: total de certificaciones de gestión forestal emitidas por el Forest Stewardship Council y el Programa de Reconocimiento de Sistemas de Certificación Forestal"@es ;
     :isComplementaryFor kmgbf:target_10 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CT.1 a :Indicator ;
     :indicatorCode "11.CT.1" ;
@@ -1974,7 +2129,8 @@ kmgbf:indicator_11.CT.1 a :Indicator ;
     skos:prefLabel "Niveaux moyens annuels de particules fines (p. ex., PM2,5 et PM10) dans les villes"@fr ;
     skos:prefLabel "Niveles medios anuales de partículas finas en suspensión (por ej., PM2.5 y PM10) en las ciudades"@es ;
     :isComponentFor kmgbf:target_11 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CT.2 a :Indicator ;
     :indicatorCode "11.CT.2" ;
@@ -1983,7 +2139,8 @@ kmgbf:indicator_11.CT.2 a :Indicator ;
     skos:prefLabel "Proporción de masas de agua con buena calidad de agua ambiente"@es ;
     :isComponentFor kmgbf:target_11 ;
     :isComplementaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CT.3 a :Indicator ;
     :indicatorCode "11.CT.3" ;
@@ -1992,7 +2149,8 @@ kmgbf:indicator_11.CT.3 a :Indicator ;
     skos:prefLabel "Nivel de estrés hídrico: extracción de agua dulce en proporción a los recursos de agua dulce disponibles"@es ;
     :isComponentFor kmgbf:target_11 ;
     :isComplementaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CY.1 a :Indicator ;
     :indicatorCode "11.CY.1" ;
@@ -2000,7 +2158,8 @@ kmgbf:indicator_11.CY.1 a :Indicator ;
     skos:prefLabel "Comptes des émissions atmosphériques"@fr ;
     skos:prefLabel "Cuentas de emisiones atmosféricas"@es ;
     :isComplementaryFor kmgbf:target_11 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CY.2 a :Indicator ;
     :indicatorCode "11.CY.2" ;
@@ -2008,7 +2167,8 @@ kmgbf:indicator_11.CY.2 a :Indicator ;
     skos:prefLabel "Pourcentage d’unités administratives locales dotées de politiques et de procédures établies et opérationnelles pour assurer la participation des communautés locales à la gestion de l’eau et de l’assainissement"@fr ;
     skos:prefLabel "Proporción de dependencias administrativas locales que han establecido políticas y procedimientos operacionales para la participación de las comunidades locales en la gestión del agua y el saneamiento"@es ;
     :isComplementaryFor kmgbf:target_11 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CY.3 a :Indicator ;
     :indicatorCode "11.CY.3" ;
@@ -2016,7 +2176,8 @@ kmgbf:indicator_11.CY.3 a :Indicator ;
     skos:prefLabel "Pourcentage de la population utilisant des services d’eau potable gérés en toute sécurité"@fr ;
     skos:prefLabel "Proporción de la población que utiliza servicios de suministro de agua potable gestionados sin riesgos"@es ;
     :isComplementaryFor kmgbf:target_11 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CY.4 a :Indicator ;
     :indicatorCode "11.CY.4" ;
@@ -2024,7 +2185,8 @@ kmgbf:indicator_11.CY.4 a :Indicator ;
     skos:prefLabel "Taux de mortalité attribué à l’eau non salubre, à l’assainissement non salubre et au manque d’hygiène (exposition aux services d’eau, d’assainissement et d’hygiène pour tous)"@fr ;
     skos:prefLabel "Tasa de mortalidad atribuida al agua insalubre, el saneamiento deficiente y la falta de higiene (exposición a servicios insalubres de agua, saneamiento e higiene para todos (WASH))"@es ;
     :isComplementaryFor kmgbf:target_11 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_11.CY.5 a :Indicator ;
     :indicatorCode "11.CY.5" ;
@@ -2032,7 +2194,8 @@ kmgbf:indicator_11.CY.5 a :Indicator ;
     skos:prefLabel "Nombre de décès, de personnes disparues et de personnes directement touchées, attribués aux catastrophes pour 100 000 habitants"@fr ;
     skos:prefLabel "Número de personas muertas, desaparecidas y afectadas directamente atribuido a desastres por cada 100.000 habitantes"@es ;
     :isComplementaryFor kmgbf:target_11 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_12.CT.1 a :Indicator ;
     :indicatorCode "12.CT.1" ;
@@ -2040,7 +2203,8 @@ kmgbf:indicator_12.CT.1 a :Indicator ;
     skos:prefLabel "Indice de Singapour sur l’indice de biodiversité des villes"@fr ;
     skos:prefLabel "Índice de Singapur de Biodiversidad Urbana"@es ;
     :isComponentFor kmgbf:target_12 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_13.CT.1 a :Indicator ;
     :indicatorCode "13.CT.1" ;
@@ -2049,7 +2213,8 @@ kmgbf:indicator_13.CT.1 a :Indicator ;
     skos:prefLabel "Número total de certificados reconocidos internacionalmente publicados en el Centro de Intercambio de Información sobre Acceso y Participación en los Beneficios"@es ;
     :isComponentFor kmgbf:target_13 ;
     :isComplementaryFor kmgbf:goal_C ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_13.CY.1 a :Indicator ;
     :indicatorCode "13.CY.1" ;
@@ -2057,7 +2222,8 @@ kmgbf:indicator_13.CY.1 a :Indicator ;
     skos:prefLabel "Nombre total de transferts de matériels de culture provenant du système multilatéral du Traité international sur les ressources phytogénétiques pour l’alimentation et l’agriculture reçus dans un pays"@fr ;
     skos:prefLabel "Número total de transferencias de material de cultivo del Sistema Multilateral del Tratado Internacional sobre los Recursos Fitogenéticos para la Alimentación y la Agricultura recibidas en un país"@es ;
     :isComplementaryFor kmgbf:target_13 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_14.CT.1 a :Indicator ;
     :indicatorCode "14.CT.1" ;
@@ -2065,7 +2231,8 @@ kmgbf:indicator_14.CT.1 a :Indicator ;
     skos:prefLabel "Intégration de la diversité biologique dans les systèmes nationaux de comptabilité et d’établissement de rapports, définie comme la mise en œuvre du Système de comptabilité économique et environnementale"@fr ;
     skos:prefLabel "Integración de la diversidad biológica en los sistemas nacionales de contabilidad y presentación de informes, que se define como la implementación del Sistema de Contabilidad Ambiental y Económica"@es ;
     :isComponentFor kmgbf:target_14 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_15.CT.1 a :Indicator ;
     :indicatorCode "15.CT.1" ;
@@ -2073,7 +2240,8 @@ kmgbf:indicator_15.CT.1 a :Indicator ;
     skos:prefLabel "Nombre d’entreprises publiant des rapports sur la durabilité"@fr ;
     skos:prefLabel "Número de empresas que publican informes de sostenibilidad"@es ;
     :isComponentFor kmgbf:target_15 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_15.CY.1 a :Indicator ;
     :indicatorCode "15.CY.1" ;
@@ -2081,7 +2249,8 @@ kmgbf:indicator_15.CY.1 a :Indicator ;
     skos:prefLabel "Nombre d’organisations au sein du pays qui ont signalé leur intention de commencer à adopter les recommandations du Groupe de travail sur la divulgation d’informations financières liées à la nature"@fr ;
     skos:prefLabel "Número de organizaciones dentro del país que han manifestado su intención de empezar a adoptar las recomendaciones del Grupo de Trabajo sobre Divulgaciones Financieras relacionadas con la Naturaleza"@es ;
     :isComplementaryFor kmgbf:target_15 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CT.1 a :Indicator ;
     :indicatorCode "16.CT.1" ;
@@ -2089,7 +2258,8 @@ kmgbf:indicator_16.CT.1 a :Indicator ;
     skos:prefLabel "Indice de gaspillage alimentaire"@fr ;
     skos:prefLabel "Índice de Desperdicio de Alimentos"@es ;
     :isComponentFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CT.2 a :Indicator ;
     :indicatorCode "16.CT.2" ;
@@ -2097,7 +2267,8 @@ kmgbf:indicator_16.CT.2 a :Indicator ;
     skos:prefLabel "Empreinte matérielle, empreinte matérielle par habitant et empreinte matérielle par PIB"@fr ;
     skos:prefLabel "Huella material en términos absolutos, huella material per cápita y huella material por PIB"@es ;
     :isComponentFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CT.3 a :Indicator ;
     :indicatorCode "16.CT.3" ;
@@ -2106,7 +2277,8 @@ kmgbf:indicator_16.CT.3 a :Indicator ;
     skos:prefLabel "Huella ecológica"@es ;
     :isComponentFor kmgbf:target_16 ;
     :isComplementaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CY.1 a :Indicator ;
     :indicatorCode "16.CY.1" ;
@@ -2114,7 +2286,8 @@ kmgbf:indicator_16.CY.1 a :Indicator ;
     skos:prefLabel "Mesure dans laquelle i) l’éducation à la citoyenneté mondiale et ii) l’éducation au développement durable, y compris l’égalité des sexes et les droits de l’homme, sont intégrés dans a) les politiques nationales d’éducation, b) les programmes d’études, c) la formation des enseignants et d) l’évaluation des élèves"@fr ;
     skos:prefLabel "Grado en que i) la educación para la ciudadanía mundial y ii) la educación para el desarrollo sostenible se integran en a) las políticas nacionales de educación, b) los planes de estudio, c) la formación del profesorado y d) la evaluación de los estudiantes"@es ;
     :isComplementaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CY.2 a :Indicator ;
     :indicatorCode "16.CY.2" ;
@@ -2122,7 +2295,8 @@ kmgbf:indicator_16.CY.2 a :Indicator ;
     skos:prefLabel "Taux de recyclage national, tonnes de matériaux recyclés"@fr ;
     skos:prefLabel "Tasa nacional de reciclado, en toneladas de material reciclado"@es ;
     :isComplementaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CY.3 a :Indicator ;
     :indicatorCode "16.CY.3" ;
@@ -2130,7 +2304,8 @@ kmgbf:indicator_16.CY.3 a :Indicator ;
     skos:prefLabel "Appropriation humaine de la production primaire nette"@fr ;
     skos:prefLabel "Apropiación humana de la producción primaria neta"@es ;
     :isComplementaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CY.4 a :Indicator ;
     :indicatorCode "16.CY.4" ;
@@ -2138,7 +2313,8 @@ kmgbf:indicator_16.CY.4 a :Indicator ;
     skos:prefLabel "Émissions de CO2 par unité de valeur ajoutée"@fr ;
     skos:prefLabel "Emisiones de CO2 por unidad de valor agregado"@es ;
     :isComplementaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CY.5 a :Indicator ;
     :indicatorCode "16.CY.5" ;
@@ -2146,7 +2322,8 @@ kmgbf:indicator_16.CY.5 a :Indicator ;
     skos:prefLabel "Évolution dans le temps de l’efficacité de l’utilisation de l’eau"@fr ;
     skos:prefLabel "Cambio en el uso eficiente de los recursos hídricos a lo largo del tiempo"@es ;
     :isComplementaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CY.6 a :Indicator ;
     :indicatorCode "16.CY.6" ;
@@ -2154,7 +2331,8 @@ kmgbf:indicator_16.CY.6 a :Indicator ;
     skos:prefLabel "Indicateurs du Programme d’évaluation de l’impact du cycle de vie"@fr ;
     skos:prefLabel "Indicadores del Programa de Evaluación del Impacto del Ciclo de Vida"@es ;
     :isComplementaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_16.CY.7 a :Indicator ;
     :indicatorCode "16.CY.7" ;
@@ -2162,7 +2340,8 @@ kmgbf:indicator_16.CY.7 a :Indicator ;
     skos:prefLabel "Niveau de pauvreté"@fr ;
     skos:prefLabel "Nivel de pobreza"@es ;
     :isComplementaryFor kmgbf:target_16 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_17.CY.1 a :Indicator ;
     :indicatorCode "17.CY.1" ;
@@ -2170,7 +2349,8 @@ kmgbf:indicator_17.CY.1 a :Indicator ;
     skos:prefLabel "Indicateurs liés au Protocole de Cartagena sur la prévention des risques biotechnologiques"@fr ;
     skos:prefLabel "Indicadores relacionados con el Protocolo de Cartagena sobre Seguridad de la Biotecnología"@es ;
     :isComplementaryFor kmgbf:target_17 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_18.CT.1 a :Indicator ;
     :indicatorCode "18.CT.1" ;
@@ -2178,7 +2358,8 @@ kmgbf:indicator_18.CT.1 a :Indicator ;
     skos:prefLabel "Recettes générées par les permis échangeables liés à la biodiversité (si mis aux enchères)"@fr ;
     skos:prefLabel "Ingresos generados por permisos negociables pertinentes para la diversidad biológica (en caso de subastarse)"@es ;
     :isComponentFor kmgbf:target_18 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_18.CT.2 a :Indicator ;
     :indicatorCode "18.CT.2" ;
@@ -2186,7 +2367,8 @@ kmgbf:indicator_18.CT.2 a :Indicator ;
     skos:prefLabel "Valeur monétaire des paiements pour les services écosystémiques"@fr ;
     skos:prefLabel "Valor monetario de los pagos por servicios de los ecosistemas"@es ;
     :isComponentFor kmgbf:target_18 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_18.CT.3 a :Indicator ;
     :indicatorCode "18.CT.3" ;
@@ -2194,7 +2376,8 @@ kmgbf:indicator_18.CT.3 a :Indicator ;
     skos:prefLabel "Valeur monétaire des compensations pour la biodiversité"@fr ;
     skos:prefLabel "Valor monetario de las compensaciones de diversidad biológica"@es ;
     :isComponentFor kmgbf:target_18 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_20.CT.1 a :Indicator ;
     :indicatorCode "20.CT.1" ;
@@ -2203,7 +2386,8 @@ kmgbf:indicator_20.CT.1 a :Indicator ;
     skos:prefLabel "Monto total de financiación para países en desarrollo destinada a promover el desarrollo, la transferencia, la difusión y la divulgación de tecnologías ecológicamente racionales"@es ;
     :isComponentFor kmgbf:target_20 ;
     :isComplementaryFor kmgbf:goal_D, kmgbf:target_19, kmgbf:target_20 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_20.CY.1 a :Indicator ;
     :indicatorCode "20.CY.1" ;
@@ -2211,7 +2395,8 @@ kmgbf:indicator_20.CY.1 a :Indicator ;
     skos:prefLabel "Chercheurs (en équivalent temps plein) par million d’habitants)"@fr ;
     skos:prefLabel "Investigadores (en equivalente a tiempo completo) por millón de habitantes"@es ;
     :isComplementaryFor kmgbf:target_20 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_20.CY.2 a :Indicator ;
     :indicatorCode "20.CY.2" ;
@@ -2219,7 +2404,8 @@ kmgbf:indicator_20.CY.2 a :Indicator ;
     skos:prefLabel "Importations mondiales de biens liés aux technologies de l’information et de la communication, présentées par flux commerciaux bilatéraux, par catégorie de biens liés aux technologies de l’information et de la communication"@fr ;
     skos:prefLabel "Importaciones mundiales de productos de tecnología de la información y las comunicaciones (TIC) según las corrientes de comercio bilateral, desglosadas por categorías de productos de TIC"@es ;
     :isComplementaryFor kmgbf:target_20 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CT.1 a :Indicator ;
     :indicatorCode "21.CT.1" ;
@@ -2227,7 +2413,8 @@ kmgbf:indicator_21.CT.1 a :Indicator ;
     skos:prefLabel "Indice d’information sur les espèces"@fr ;
     skos:prefLabel "Índice de Información de Especies"@es ;
     :isComponentFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CT.2 a :Indicator ;
     :indicatorCode "21.CT.2" ;
@@ -2235,7 +2422,8 @@ kmgbf:indicator_21.CT.2 a :Indicator ;
     skos:prefLabel "Participation des peuples autochtones et communautés locales à la prise de décisions concernant l’application de la Convention à tous les niveaux"@fr ;
     skos:prefLabel "Participación de los pueblos indígenas y las comunidades locales en la adopción de decisiones relacionadas con la aplicación del Convenio a todos los niveles"@es ;
     :isComponentFor kmgbf:target_21, kmgbf:target_22 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CT.3 a :Indicator ;
     :indicatorCode "21.CT.3" ;
@@ -2244,7 +2432,8 @@ kmgbf:indicator_21.CT.3 a :Indicator ;
     skos:prefLabel "Índice de Diversidad Lingüística"@es ;
     :isComponentFor kmgbf:target_21, kmgbf:target_22 ;
     :isComplementaryFor kmgbf:goal_B ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CY.1 a :Indicator ;
     :indicatorCode "21.CY.1" ;
@@ -2252,7 +2441,8 @@ kmgbf:indicator_21.CY.1 a :Indicator ;
     skos:prefLabel "Augmentation du nombre d’enregistrements et d’espèces dans la base de données Living Planet Index"@fr ;
     skos:prefLabel "Crecimiento en el número de registros y especies en la base de datos del Índice Planeta Vivo"@es ;
     :isComplementaryFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CY.2 a :Indicator ;
     :indicatorCode "21.CY.2" ;
@@ -2260,7 +2450,8 @@ kmgbf:indicator_21.CY.2 a :Indicator ;
     skos:prefLabel "Augmentation des enregistrements de présence d’espèces accessibles par le biais du Global Biodiversity Information Facility"@fr ;
     skos:prefLabel "Crecimiento de registros de presencia de especies en la Infraestructura Mundial de Información sobre Biodiversidad"@es ;
     :isComplementaryFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CY.3 a :Indicator ;
     :indicatorCode "21.CY.3" ;
@@ -2268,7 +2459,8 @@ kmgbf:indicator_21.CY.3 a :Indicator ;
     skos:prefLabel "Augmentation des relevés d’occurrence d’espèces marines accessibles par le biais du système d’information sur la biodiversité océanique"@fr ;
     skos:prefLabel "Crecimiento de registros de presencia de especies marinas accesibles a través del Sistema de Información sobre la Biodiversidad del Océano"@es ;
     :isComplementaryFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CY.4 a :Indicator ;
     :indicatorCode "21.CY.4" ;
@@ -2276,7 +2468,8 @@ kmgbf:indicator_21.CY.4 a :Indicator ;
     skos:prefLabel "Pourcentage des espèces connues évaluées par l’Union internationale pour la conservation de la nature - Liste rouge des espèces menacées"@fr ;
     skos:prefLabel "Proporción de especies conocidas evaluadas a través de la Lista Roja de Especies Amenazadas de la Unión Internacional para la Conservación de la Naturaleza"@es ;
     :isComplementaryFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CY.5 a :Indicator ;
     :indicatorCode "21.CY.5" ;
@@ -2284,7 +2477,8 @@ kmgbf:indicator_21.CY.5 a :Indicator ;
     skos:prefLabel "Nombre d’évaluations sur la Liste rouge des espèces menacées™ de l’Union internationale pour la conservation de la nature"@fr ;
     skos:prefLabel "Número de evaluaciones en la Lista Roja de Especies Amenazadas de la Unión Internacional para la Conservación de la Naturaleza"@es ;
     :isComplementaryFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_21.CY.6 a :Indicator ;
     :indicatorCode "21.CY.6" ;
@@ -2292,7 +2486,8 @@ kmgbf:indicator_21.CY.6 a :Indicator ;
     skos:prefLabel "Enquête de bio-alphabétisation de l’Association mondiale des zoos et aquariums (culture de la biodiversité chez les visiteurs des zoos et aquariums du monde entier)"@fr ;
     skos:prefLabel "Encuesta de bioalfabetización de la Asociación Mundial de Zoológicos y Acuarios (conocimientos de diversidad biológica de visitantes mundiales a zoológicos y acuarios)"@es ;
     :isComplementaryFor kmgbf:target_21 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CT.1 a :Indicator ;
     :indicatorCode "22.CT.1" ;
@@ -2300,7 +2495,8 @@ kmgbf:indicator_22.CT.1 a :Indicator ;
     skos:prefLabel "Pourcentage de la population adulte totale ayant des droits fonciers garantis, a) disposant de documents légalement reconnus, et b) percevant leurs droits fonciers de manière garantie, par sexe et par type de régime foncier"@fr ;
     skos:prefLabel "Proporción del total de la población adulta con derechos seguros de tenencia de la tierra que a) posee documentación al respecto reconocida legalmente; y b) considera seguros sus derechos sobre la tierra, desglosada por sexo y tipo de tenencia"@es ;
     :isComponentFor kmgbf:target_22, kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CT.2 a :Indicator ;
     :indicatorCode "22.CT.2" ;
@@ -2308,7 +2504,8 @@ kmgbf:indicator_22.CT.2 a :Indicator ;
     skos:prefLabel "Nombre de cas vérifiés d’homicides et d’autres attaques contre des défenseurs des droits de l’homme en matière d’environnement au cours des 12 derniers mois"@fr ;
     skos:prefLabel "Número de casos verificados de asesinatos y otros ataques contra defensores y defensoras de los derechos humanos relacionados con el medio ambiente cometidos en los 12 meses anteriores"@es ;
     :isComponentFor kmgbf:target_22 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CY.1 a :Indicator ;
     :indicatorCode "22.CY.1" ;
@@ -2316,7 +2513,8 @@ kmgbf:indicator_22.CY.1 a :Indicator ;
     skos:prefLabel "Part des postes dans les institutions nationales et locales, y compris : a) les organes législatifs ; b) la fonction publique ; et c) le pouvoir judiciaire, par rapport à la répartition nationale, par sexe, âge, handicap et groupe de population"@fr ;
     skos:prefLabel "Proporciones de cargos en instituciones nacionales y locales, incluidos a) el poder legislativo, b) la administración pública y c) el poder judicial, en comparación con las distribuciones nacionales, desglosadas por sexo, edad, personas con discapacidad y grupos demográficos"@es ;
     :isComplementaryFor kmgbf:target_22, kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CY.2 a :Indicator ;
     :indicatorCode "22.CY.2" ;
@@ -2324,7 +2522,8 @@ kmgbf:indicator_22.CY.2 a :Indicator ;
     skos:prefLabel "Part des pays dotés de systèmes permettant de suivre et de rendre publiques les allocations destinées à l’égalité des sexes et à l’autonomisation des femmes"@fr ;
     skos:prefLabel "Proporción de países con sistemas para la medición de la igualdad de género y el empoderamiento de las mujeres y para la asignación de fondos públicos para tales fines"@es ;
     :isComplementaryFor kmgbf:target_22 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CY.3 a :Indicator ;
     :indicatorCode "22.CY.3" ;
@@ -2332,7 +2531,8 @@ kmgbf:indicator_22.CY.3 a :Indicator ;
     skos:prefLabel "a) Pourcentage de la population agricole totale détenant des droits de propriété ou des droits garantis sur des terres agricoles, par sexe ; et b) pourcentage de femmes parmi les propriétaires ou détenteurs de droits sur des terres agricoles, par type de régime foncier"@fr ;
     skos:prefLabel "a) Proporción del total de la población agrícola con derechos de propiedad o derechos seguros sobre tierras agrícolas, desglosada por sexo; y b) proporción de mujeres entre los propietarios o los titulares de derechos sobre tierras agrícolas, desglosada por tipo de tenencia"@es ;
     :isComplementaryFor kmgbf:target_22, kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CY.4 a :Indicator ;
     :indicatorCode "22.CY.4" ;
@@ -2340,7 +2540,8 @@ kmgbf:indicator_22.CY.4 a :Indicator ;
     skos:prefLabel "Pourcentage des pays où le cadre juridique (y compris le droit coutumier) garantit aux femmes des droits égaux à la propriété et/ou au contrôle foncier"@fr ;
     skos:prefLabel "Proporción de países cuyo ordenamiento jurídico (incluido el derecho consuetudinario) garantiza a las mujeres la igualdad de derechos de propiedad o control de la tierra"@es ;
     :isComplementaryFor kmgbf:target_22, kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CY.5 a :Indicator ;
     :indicatorCode "22.CY.5" ;
@@ -2348,7 +2549,8 @@ kmgbf:indicator_22.CY.5 a :Indicator ;
     skos:prefLabel "Pourcentage de la population estimant que la prise de décision est inclusive et adaptée, par sexe, âge, handicap et groupe de population"@fr ;
     skos:prefLabel "Proporción de la población que considera que la adopción de decisiones es inclusiva y responde a sus necesidades, desglosada por sexo, edad, personas con discapacidad y grupo demográfico"@es ;
     :isComplementaryFor kmgbf:target_22, kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_22.CY.6 a :Indicator ;
     :indicatorCode "22.CY.6" ;
@@ -2356,7 +2558,8 @@ kmgbf:indicator_22.CY.6 a :Indicator ;
     skos:prefLabel "Zone couverte par les territoires déclarés et zones gouvernées, gérées et conservées par les peuples autochtones et communautés locales en tant que gardiens (ICCA - territoires de vie)"@fr ;
     skos:prefLabel "Superficie cubierta por los territorios y áreas declarados que son gobernados, gestionados y conservados por pueblos indígenas y comunidades locales en calidad de custodios (TICCA – territorios de vida)"@es ;
     :isComplementaryFor kmgbf:target_22 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_23.CT.1 a :Indicator ;
     :indicatorCode "23.CT.1" ;
@@ -2364,7 +2567,8 @@ kmgbf:indicator_23.CT.1 a :Indicator ;
     skos:prefLabel "Pourcentage de sièges occupés par des femmes dans a) les parlements nationaux et b) les administrations locales"@fr ;
     skos:prefLabel "Proporción de cargos ocupados por mujeres en a) parlamentos nacionales; y b) gobiernos locales"@es ;
     :isComponentFor kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_23.CT.2 a :Indicator ;
     :indicatorCode "23.CT.2" ;
@@ -2372,7 +2576,8 @@ kmgbf:indicator_23.CT.2 a :Indicator ;
     skos:prefLabel "Indicateur de mise en œuvre nationale du plan d’action pour l’égalité des sexes (2023-2030)"@fr ;
     skos:prefLabel "Indicador sobre la aplicación nacional del Plan de Acción sobre Género (2023-2030)"@es ;
     :isComponentFor kmgbf:target_23 ;
-    skos:inScheme kmgbf:indicatorScheme .
+    skos:inScheme kmgbf:indicatorScheme ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 
 @prefix : <http://metadata.cbd.int/kmgbf/ontology#> .

@@ -14,6 +14,7 @@
     dct:created "2026-01-29"^^xsd:date ;
     dct:creator "Convention on Biological Diversity Secretariat" ;
     rdfs:comment "Official ontology for the monitoring framework of the Kunming-Montreal Global Biodiversity Framework adopted at COP-15 in December 2022. Based on Decision 16/31 (February 2025) on indicators for the monitoring framework. Goals and Targets are parallel concepts at the same hierarchical level, both monitored by indicators."@en ;
+    skos:note "Note on SKOS compatibility: The triplestore serving this ontology contains additional skos:broader/skos:narrower triples linking indicators to goals and targets. These are NOT part of this OWL model — they are materialized by the data loading pipeline solely to enable browsing in SKOSMOS, which requires a SKOS hierarchy. The canonical relationships defined here are :isHeadlineFor, :isBinaryFor, :isComponentFor, and :isComplementaryFor. These role-typed properties correctly express that a single indicator can have different roles for different goals or targets — a fact that a flat skos:broader hierarchy cannot represent."@en ;
     owl:versionInfo "1.0" ;
     rdfs:seeAlso <https://www.cbd.int/gbf> ,
                  <https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf> .
