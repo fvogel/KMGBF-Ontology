@@ -4,6 +4,16 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+## KMGBF Concept Scheme (Goals + Targets) ##
+
+kmgbf:kmgbfScheme a skos:ConceptScheme ;
+    skos:prefLabel "KMGBF Goals and Targets"@en ,
+                   "Objectifs et cibles du CBDMK"@fr ,
+                   "Objetivos y metas del MCBKM"@es ;
+    dct:created "2026-01-29"^^xsd:date ;
+    dct:modified "2026-03-05"^^xsd:date ;
+    dct:source "https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf" .
+
 ##############################################################################
 # KMGBF Goals (A, B, C, D)
 #

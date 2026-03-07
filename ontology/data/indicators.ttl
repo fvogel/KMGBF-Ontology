@@ -23,6 +23,8 @@
 ## All indicators share the same source ##
 kmgbf:indicatorScheme a skos:ConceptScheme ;
     skos:prefLabel "KMGBF Monitoring Framework Indicators"@en ;
+    dct:created "2026-01-29"^^xsd:date ;
+    dct:modified "2026-03-05"^^xsd:date ;
     dct:source "https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf" .
 
 kmgbf:indicator_A.1 a :Indicator ;
