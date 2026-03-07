@@ -70,6 +70,14 @@ Or use the live REST API directly — see [examples/api.md](examples/api.md).
 Data derived from [Decision 16/31](https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf)
 (Annexes I, II, and III).
 
+## Citation
+
+If you use this ontology in your work, please cite:
+
+> Secretariat of the Convention on Biological Diversity (2026).
+> KMGBF Monitoring Framework Ontology. Version 1.0.1.
+> Available at: http://metadata.cbd.int/kmgbf/ontology
+
 ## Contact
 
 For questions: [secretariat@cbd.int](mailto:secretariat@cbd.int)
