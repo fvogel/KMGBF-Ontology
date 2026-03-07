@@ -35,5 +35,14 @@ def main() -> None:
     OUT.write_text(text, encoding="utf-8")
     print(f"Wrote {OUT.name}")
 
+    # Warn if public mirror is out of sync
+    sync_script = Path(__file__).resolve().parent.parent.parent / "platform/scripts/check-public-sync.sh"
+    if sync_script.exists():
+        import subprocess
+        result = subprocess.run(["bash", str(sync_script)], capture_output=True, text=True)
+        print(result.stdout.strip())
+        if result.returncode != 0:
+            print(f"WARNING: public mirror out of sync — run check-public-sync.sh for details", file=sys.stderr)
+
 if __name__ == "__main__":
     main()
