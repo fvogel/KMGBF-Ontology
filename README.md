@@ -1,5 +1,7 @@
 # KMGBF Ontology
 
+[![License: CC BY 4.0 IGO](https://img.shields.io/badge/License-CC%20BY%204.0%20IGO-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/igo/)
+
 Machine-readable ontology and controlled vocabulary for the
 [Kunming-Montreal Global Biodiversity Framework](https://www.cbd.int/gbf) (KMGBF),
 published by the [Convention on Biological Diversity](https://www.cbd.int/) Secretariat.
