@@ -65,10 +65,19 @@ Then query it — see [examples/sparql.md](examples/sparql.md) for annotated exa
 
 Or use the live REST API directly — see [examples/api.md](examples/api.md).
 
-## Source
+## Sources
 
-Data derived from [Decision 16/31](https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf)
-(Annexes I, II, and III).
+- **Goals and Targets**: [Decision 15/4](https://www.cbd.int/doc/decisions/cop-15/cop-15-dec-04-en.pdf)
+  (COP-15, Montreal, December 2022)
+- **Indicators and their roles** (headline, binary, component, complementary):
+  [Decision 16/31](https://www.cbd.int/doc/decisions/cop-16/cop-16-dec-31-en.pdf)
+  (Annexes I, II, and III)
+- **Indicator definitions and custodian agencies**, headline indicators only:
+  [CBD/COP/16/INF/3/Rev.1](https://www.cbd.int/doc/c/ea34/8414/8c5e6797d291af15f33d6e40/cop-16-inf-03-rev1-en.pdf),
+  field 5a (Definition) and field 10a (Organization) of each indicator metadata sheet
+
+Every goal, target and indicator carries a `dct:source` triple naming the decision it
+derives from.
 
 ## Citation
 
