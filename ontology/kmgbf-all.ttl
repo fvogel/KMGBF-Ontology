@@ -2611,7 +2611,8 @@ kmgbf:indicator_23.CT.2 a :Indicator ;
 
 ## Provenance
 <http://metadata.cbd.int/kmgbf/indicators-guidance>
-    dct:source "CBD/COP/16/INF/3/Rev.1" ;
+    dct:source "https://www.cbd.int/doc/c/ea34/8414/8c5e6797d291af15f33d6e40/cop-16-inf-03-rev1-en.pdf" ;
+    dct:bibliographicCitation "CBD/COP/16/INF/3/Rev.1" ;
     dct:description "skos:definition values extracted from field 5a (Indicator definition); :custodianAgency values extracted from field 10a (Custodian organisation)."@en .
 
 kmgbf:indicator_A.1
