@@ -84,7 +84,7 @@ derives from.
 If you use this ontology in your work, please cite:
 
 > Secretariat of the Convention on Biological Diversity (2026).
-> KMGBF Monitoring Framework Ontology. Version 1.0.1.
+> KMGBF Monitoring Framework Ontology. Version 1.0.2.
 > Available at: http://metadata.cbd.int/kmgbf/ontology
 
 ## Contact

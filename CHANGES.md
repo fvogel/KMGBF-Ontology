@@ -9,6 +9,25 @@ Versioning follows [Semantic Versioning](https://semver.org/):
 
 ---
 
+## [1.0.2] — 2026-10-22
+
+### Fixed
+- `dct:source` on the indicator guidance provenance record
+  (`<http://metadata.cbd.int/kmgbf/indicators-guidance>`) changed from the
+  document symbol to the URL of CBD/COP/16/INF/3/Rev.1 on cbd.int, matching
+  the convention used on goals, targets and indicators.
+
+### Added
+- `dct:bibliographicCitation "CBD/COP/16/INF/3/Rev.1"` on the same record,
+  so the document symbol is kept for citation.
+- `owl:versionInfo` bumped from `"1.0.1"` to `"1.0.2"`; ontology
+  `dct:modified` set to 2026-10-22.
+
+### Distribution
+- `kmgbf-all.ttl` rebuilt: 2,334 triples (up from 2,333 in v1.0.1)
+
+---
+
 ## [1.0.1] — 2026-03-05
 
 ### Fixed
